@@ -58,3 +58,4 @@ async function processImages() {
 }
 
 processImages().catch(console.error);
+

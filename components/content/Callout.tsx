@@ -1,19 +1,35 @@
 import React from "react";
-import { Info, Lightbulb, AlertTriangle } from "lucide-react";
+import { Info, Lightbulb, AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+export type CalloutType =
+  | "note"
+  | "info"
+  | "tip"
+  | "warning"
+  | "danger"
+  | "caution";
+
 interface CalloutProps {
-  type?: "note" | "tip" | "warning";
+  type?: CalloutType | string;
   title?: string;
   children: React.ReactNode;
 }
 
 export function Callout({ type = "note", title, children }: CalloutProps) {
-  const configs = {
+  const configs: Record<
+    string,
+    { border: string; icon: React.ReactNode; defaultTitle: string }
+  > = {
     note: {
       border: "border-brand/40 bg-surface-tint/60 text-ink",
       icon: <Info className="w-5 h-5 text-brand shrink-0" />,
       defaultTitle: "Note",
+    },
+    info: {
+      border: "border-focus/40 bg-focus/10 text-ink",
+      icon: <AlertCircle className="w-5 h-5 text-focus shrink-0" />,
+      defaultTitle: "Information",
     },
     tip: {
       border: "border-success/40 bg-success/10 text-ink",
@@ -21,13 +37,24 @@ export function Callout({ type = "note", title, children }: CalloutProps) {
       defaultTitle: "Tip",
     },
     warning: {
-      border: "border-danger/40 bg-danger/10 text-ink",
-      icon: <AlertTriangle className="w-5 h-5 text-danger shrink-0" />,
+      border: "border-accent/60 bg-accent/15 text-ink",
+      icon: <AlertTriangle className="w-5 h-5 text-accent shrink-0" />,
       defaultTitle: "Important",
+    },
+    danger: {
+      border: "border-danger/40 bg-danger/10 text-ink",
+      icon: <ShieldAlert className="w-5 h-5 text-danger shrink-0" />,
+      defaultTitle: "Warning",
+    },
+    caution: {
+      border: "border-danger/40 bg-danger/10 text-ink",
+      icon: <ShieldAlert className="w-5 h-5 text-danger shrink-0" />,
+      defaultTitle: "Caution",
     },
   };
 
-  const current = configs[type];
+  const normalizedType = (type || "note").toLowerCase();
+  const current = configs[normalizedType] || configs.note;
 
   return (
     <aside
