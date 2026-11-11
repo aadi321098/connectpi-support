@@ -115,7 +115,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           />
 
           {/* Main Content Area */}
-          <div className="flex-1 w-full max-w-prose">
+          <div className="flex-1 w-full min-w-0 max-w-4xl">
             {/* Mobile / Tablet Topic Switcher */}
             <TopicSwitcher
               product={product}

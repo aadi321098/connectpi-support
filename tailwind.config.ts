@@ -53,8 +53,8 @@ const config: Config = {
         overlay: "0 12px 32px rgba(27, 21, 48, 0.18)",
       },
       maxWidth: {
-        container: "1120px",
-        prose: "720px",
+        container: "1380px",
+        prose: "760px",
       },
     },
   },

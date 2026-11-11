@@ -15,9 +15,9 @@ export function Footer() {
       className="bg-ink text-footer-text mt-auto border-t border-ink-body/20 safe-padding-bottom"
     >
       <Container className="py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand Column (Desktop: spans 2 cols, Tablet: 1 col, Mobile: 1 col) */}
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Brand Column */}
+          <div className="max-w-sm">
             <Link
               href="/"
               className="inline-flex items-center gap-2.5 text-white font-heading font-bold text-xl tracking-tight mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus rounded-r-md group"
@@ -31,7 +31,7 @@ export function Footer() {
               />
               <span>{siteConfig.siteName}</span>
             </Link>
-            <p className="text-sm text-footer-text/80 leading-relaxed max-w-sm">
+            <p className="text-sm text-footer-text/80 leading-relaxed">
               {siteConfig.footer.brandDescription}
             </p>
           </div>

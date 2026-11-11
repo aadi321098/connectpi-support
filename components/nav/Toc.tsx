@@ -94,7 +94,7 @@ export function Toc({ headings, variant = "all" }: TocProps) {
       {(variant === "rail" || variant === "all") && (
         <nav
           aria-label="On this page"
-          className="hidden xl:block w-56 shrink-0 sticky top-[calc(var(--header-height)+24px)] max-h-[calc(100dvh-var(--header-height)-48px)] overflow-y-auto pl-4 border-l border-border"
+          className="hidden xl:block w-60 2xl:w-64 shrink-0 sticky top-[calc(var(--header-height)+24px)] max-h-[calc(100dvh-var(--header-height)-48px)] overflow-y-auto pl-5 border-l border-border"
         >
           <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-ink-muted mb-3 flex items-center gap-1.5">
             <AlignLeft className="w-3.5 h-3.5 text-brand" />
