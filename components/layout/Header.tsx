@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { MobileDrawer } from "./MobileDrawer";
 import { Button } from "@/components/ui/Button";
+import { ProductIcon } from "@/components/ui/ProductIcon";
 import { Menu, Search, ExternalLink, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import siteConfig from "@/content/site.json";
@@ -20,6 +21,41 @@ export function Header() {
 
   // Check if current path matches an app/product
   const activeProduct = products.find((p) => pathname.startsWith(`/${p.slug}`));
+
+  // Dismiss dropdown when clicking outside or pressing Escape
+  useEffect(() => {
+    if (!isAppMenuOpen) return;
+
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
+      if (
+        appDropdownRef.current &&
+        !appDropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsAppMenuOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsAppMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isAppMenuOpen]);
+
+  // Close dropdown on route change
+  useEffect(() => {
+    setIsAppMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -58,20 +94,25 @@ export function Header() {
                 >
                   <span
                     aria-hidden="true"
-                    className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 select-none"
+                    className="w-5 h-5 rounded-full flex items-center justify-center text-white shrink-0 select-none shadow-xs"
                     style={{ backgroundColor: activeProduct.accent }}
                   >
-                    {activeProduct.initial}
+                    <ProductIcon slug={activeProduct.slug} size={11} />
                   </span>
                   <span>{activeProduct.name}</span>
-                  <ChevronDown aria-hidden="true" className="w-3.5 h-3.5 text-ink-muted" />
+                  <ChevronDown
+                    aria-hidden="true"
+                    className={`w-3.5 h-3.5 text-ink-muted transition-transform duration-200 ${
+                      isAppMenuOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
 
                 {isAppMenuOpen && (
                   <div
                     role="listbox"
                     aria-label="Available products"
-                    className="absolute top-full left-0 mt-1 w-48 bg-surface border border-border rounded-r-lg shadow-overlay py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100"
+                    className="absolute top-full left-0 mt-1 w-52 bg-surface border border-border rounded-r-lg shadow-overlay py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100"
                   >
                     {products.map((product) => (
                       <Link
@@ -87,10 +128,10 @@ export function Header() {
                         }`}
                       >
                         <span
-                          className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] font-bold text-white shrink-0"
+                          className="w-5 h-5 rounded-full flex items-center justify-center text-white shrink-0 shadow-xs"
                           style={{ backgroundColor: product.accent }}
                         >
-                          {product.initial}
+                          <ProductIcon slug={product.slug} size={11} />
                         </span>
                         <span>{product.name}</span>
                       </Link>

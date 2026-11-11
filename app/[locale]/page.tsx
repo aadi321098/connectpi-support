@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Chip } from "@/components/ui/Chip";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/content/Badge";
+import { ProductIcon } from "@/components/ui/ProductIcon";
 import {
   getProducts,
   getFeaturedArticles,
@@ -127,10 +128,10 @@ export default async function HomePage({ params }: HomePageProps) {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span
-                      className="w-11 h-11 rounded-r-lg flex items-center justify-center font-heading font-bold text-lg text-white shadow-sm shrink-0"
+                      className="w-11 h-11 rounded-r-lg flex items-center justify-center text-white shadow-sm shrink-0"
                       style={{ backgroundColor: product.accent }}
                     >
-                      {product.initial}
+                      <ProductIcon slug={product.slug} size={22} />
                     </span>
                     <h3 className="font-heading font-bold text-lg text-ink group-hover:text-brand transition-colors">
                       {product.name}

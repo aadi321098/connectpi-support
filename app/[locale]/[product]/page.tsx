@@ -8,6 +8,7 @@ import { Breadcrumb } from "@/components/nav/Breadcrumb";
 import { Sidebar } from "@/components/nav/Sidebar";
 import { Card } from "@/components/ui/Card";
 import { ContactCTA } from "@/components/content/ContactCTA";
+import { ProductIcon } from "@/components/ui/ProductIcon";
 import {
   getProduct,
   getProducts,
@@ -77,10 +78,10 @@ export default async function ProductHubPage({ params }: ProductHubPageProps) {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-2">
             <div className="flex items-center gap-4">
               <span
-                className="w-14 h-14 rounded-r-xl flex items-center justify-center font-heading font-bold text-2xl text-white shadow-md shrink-0"
+                className="w-14 h-14 rounded-r-xl flex items-center justify-center text-white shadow-md shrink-0"
                 style={{ backgroundColor: product.accent }}
               >
-                {product.initial}
+                <ProductIcon slug={product.slug} size={28} />
               </span>
               <div>
                 <h1 className="font-heading font-bold text-2xl sm:text-3xl text-ink">

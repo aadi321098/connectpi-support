@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
+import { ProductIcon } from "@/components/ui/ProductIcon";
 import { X, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import siteConfig from "@/content/site.json";
@@ -145,10 +146,10 @@ export function MobileDrawer({ isOpen, onClose, triggerRef }: MobileDrawerProps)
                   className="flex items-center gap-3 px-3 py-2.5 rounded-r-md hover:bg-surface-tint text-sm font-medium text-ink transition-colors"
                 >
                   <span
-                    className="w-7 h-7 rounded-r-md flex items-center justify-center text-xs font-bold text-white shrink-0"
+                    className="w-7 h-7 rounded-r-md flex items-center justify-center text-white shrink-0"
                     style={{ backgroundColor: product.accent }}
                   >
-                    {product.initial}
+                    <ProductIcon slug={product.slug} size={15} />
                   </span>
                   <span>{product.name}</span>
                 </Link>
