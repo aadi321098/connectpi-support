@@ -62,3 +62,4 @@ export function trackEvent(name: AnalyticsEvent, payload?: AnalyticsPayload): vo
     }
   }
 }
+

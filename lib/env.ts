@@ -8,7 +8,7 @@ const envSchema = z.object({
   TURNSTILE_SECRET_KEY: z.string().optional().default(""),
   RESEND_API_KEY: z.string().optional().default(""),
   SUPPORT_TO_EMAIL: z.string().email().optional().default("support@connectpi.in"),
-  SUPPORT_FROM_EMAIL: z.string().email().optional().default("noreply@connectpi.in"),
+  SUPPORT_FROM_EMAIL: z.string().min(3).optional().default("ConnectPi Support <support@connectpi.in>"),
   UPSTASH_REDIS_REST_URL: z.string().optional().default(""),
   UPSTASH_REDIS_REST_TOKEN: z.string().optional().default(""),
   SENTRY_DSN: z.string().optional().default(""),

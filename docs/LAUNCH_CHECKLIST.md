@@ -130,3 +130,4 @@ NEXT_PUBLIC_ANALYTICS_ID=support.connectpi.in
 - [ ] Submit a test ticket on `/contact` with valid inputs -> verify email arrives in `support@connectpi.in`.
 - [ ] Rate limit test: submit contact form 5+ times from the same IP -> verify HTTP 429 is returned.
 - [ ] Run `npm run test:e2e` against production URL to verify all device layouts (mobile, tablet, desktop).
+

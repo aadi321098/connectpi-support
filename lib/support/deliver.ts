@@ -65,6 +65,45 @@ ${data.message}
       return { success: false, error: response.error.message };
     }
 
+    // Automated Confirmation Email to User
+    try {
+      const userSubject = `[ConnectPi Support] Ticket Received: ${data.subject} (#${requestId})`;
+      const userContent = `
+Hi ${data.name},
+
+Thank you for reaching out to ConnectPi Support! We have received your request.
+
+--- Your Ticket Details ---
+• Ticket ID: #${requestId}
+• Product: ${productName}
+• Request Type: ${data.type.toUpperCase()}
+• Subject: ${data.subject}
+
+Our support team is reviewing your inquiry and will contact you within 24 to 48 hours at this email address (${data.email}).
+
+If you have additional details or screenshots to share, please hold on to this Ticket ID for quick reference.
+
+Best regards,
+ConnectPi Support Team
+https://help.connectpi.in
+
+==================================================
+NOTE: Yeh ek automated confirmation email hai to confirm that your request was safely received. Kripya is automated email ka direct reply na karein.
+==================================================
+      `.trim();
+
+      await resend.emails.send({
+        from: fromEmail,
+        to: data.email,
+        subject: userSubject,
+        text: userContent,
+      });
+      console.log(`✉️ Automated confirmation sent to user: ${data.email} for ticket ${requestId}`);
+    } catch (autoErr) {
+      // Non-blocking: Admin ticket is already delivered safely
+      console.warn(`[Auto-responder] Could not send confirmation to ${data.email}:`, autoErr);
+    }
+
     return { success: true, messageId: response.data?.id };
   } catch (err: unknown) {
     const errorMsg = err instanceof Error ? err.message : "Unknown email error";

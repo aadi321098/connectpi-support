@@ -70,3 +70,4 @@ test.describe("Accessibility Audits (Axe-core WCAG 2.1 AA)", () => {
     expect(accessibilityScanResults.violations).toEqual([]);
   });
 });
+

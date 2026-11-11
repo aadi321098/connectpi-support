@@ -49,3 +49,4 @@
 1. **Hindi Localization (`hi`):** Framework is wired with `next-intl`; full Devanagari translation catalog can be enabled by flipping `features.enableHindi: true`.
 2. **Dark Mode:** Dark theme tokens are fully reserved in `styles/globals.css` and can be enabled via `features.enableDarkMode: true`.
 3. **Real Knowledge Base Copy:** The user will progressively replace starter placeholder articles using `docs/PLACEHOLDER_AUDIT.md`.
+
