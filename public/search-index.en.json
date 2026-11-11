@@ -179,8 +179,8 @@
   {
     "id": "shared/safety-privacy/privacy-overview",
     "url": "/shared/safety-privacy/privacy-overview",
-    "title": "Privacy and data protection on ConnectPi",
-    "summary": "Understand what data ConnectPi collects, how it is stored, and your privacy choices.",
+    "title": "Privacy, Data Protection & Account Deletion on ConnectPi",
+    "summary": "Detailed overview of ConnectPi's non-custodial architecture, data collection policies, content lifecycle buffers, and account deletion procedures.",
     "category": "safety-privacy",
     "categoryTitle": "Safety & privacy",
     "product": "shared",
@@ -189,14 +189,23 @@
     "tags": [
       "privacy",
       "security",
-      "data",
-      "gdpr"
+      "data-protection",
+      "gdpr",
+      "account-deletion",
+      "passphrase-safety"
     ],
     "headings": [
-      "What information is collected",
-      "Controlling your profile privacy"
+      "1. Core Privacy Principles",
+      "2. Information We Collect",
+      "3. Content Lifecycle & Post Deletion Buffers",
+      "Immediate Public Removal",
+      "20 to 30-Day Soft-Deletion Grace Period",
+      "Reposted & Shared Content Retention (Up to 90 Days)",
+      "4. How to Delete Your Account",
+      "5. Third-Party Infrastructure Partners",
+      "6. Official Policies & Legal Inquiries"
     ],
-    "body": "ConnectPi values pioneer privacy and adheres to minimal data collection principles. What information is collected Public username and display handle. Authenticated Pi Network UID (hashed for authentication). Voluntarily posted public discussions and community reactions. ConnectPi operates entirely non custodially. We never request, process, or store your 24 word cryptographic seed passphrase. Controlling your profile privacy You can control who views your active status, loyalty leaderboard position, and notifications directly from your profile settings menu. [PLACEHOLDER: Insert link to full legal privacy policy and data deletion request instructions.]"
+    "body": "ConnectPi is committed to protecting Pioneer privacy, ensuring transparent data governance, and upholding strict non custodial blockchain principles across both our Web portal and Android mobile application. 1. Core Privacy Principles ConnectPi is designed with four foundational data security pillars: Non Custodial Architecture: ConnectPi interfaces directly with the decentralized Pi Network via official SDK protocols. Your private wallet keys and 24 word passphrase remain strictly on your own device and are never requested or stored. Data Minimization: We only collect the minimal personal and technical information required to maintain account integrity, deliver social features, and prevent fraudulent abuse. User Ownership: You retain complete control over your social content, profile details, and account lifecycle. Encryption Standards: All network transmissions are protected with TLS 1.3 encryption, and backend databases utilize AES 256 encryption at rest. ConnectPi will never ask for your 24 word Pi passphrase. Authentication relies strictly on the official Pi Network OAuth token system. Anyone requesting your passphrase, private keys, or wallet seed phrase is an unauthorized scammer attempting to compromise your funds. 2. Information We Collect In accordance with our official Privacy Policy, we collect and process the following categories of data: | Category | Description | Purpose | | | | | | Account & Identity | Name, unique username, email address, and hashed credentials. | Account registration, authentication, and security notifications. | | Pi Network Profile | Hashed Pi UID and public wallet address. | Verifying Pioneer status, processing P2P tips, and distributing CP loyalty tokens. | | User Generated Content | Posts, photos, videos, comments, direct messages, and channel chats. | Platform feeds, social discovery, and community interactions. | | Marketplace & Escrow | Item listings, order IDs, shipping details, and transaction hashes. | Order fulfillment, buyer/seller protection, and dispute resolution. | | Optional Location Data | Coarse or precise GPS coordinates (only when explicitly permitted). | Filtering local feeds and discovering nearby community marketplace listings. | | Diagnostic & Device Data | IP address, browser type, app version, and crash logs. | Platform stability, debugging, and preventing automated bot abuse. | 3. Content Lifecycle & Post Deletion Buffers ConnectPi provides authors with full control over their posted content while balancing platform continuity and legal compliance: Immediate Public Removal When you delete a post, comment, or media attachment, it is immediately removed from public feeds, channel streams, and user profiles. 20 to 30 Day Soft Deletion Grace Period To safeguard against accidental deletion, enable account recovery, and satisfy statutory fraud prevention and legal audit requirements, deleted posts and physical media files (photos, videos, thumbnails) are securely retained in an encrypted soft deletion buffer for 20 to 30 days . During this window, the content is completely inaccessible to all other users. Reposted & Shared Content Retention (Up to 90 Days) If a post has been reposted, quoted, or shared by other Pioneers across ConnectPi prior to deletion, the underlying content or thread reference may be securely retained in our system for up to 90 days to maintain feed integrity, discussion continuity, and community context before permanent automated purging. 4. How to Delete Your Account If you wish to permanently terminate your ConnectPi account and delete associated data, follow these steps: Log in to ConnectPi and open Settings (or visit https://connectpi.in/settings ). Scroll to the bottom of the page and select Delete Account (or navigate to https://connectpi.in/delete account ). Review the warning terms, optionally provide feedback regarding your departure, and tap Submit Account Deletion Request . ConnectPi provides an automatic 10 day grace period ( DELETION GRACE PERIOD DAYS = 10 ): If you change your mind within 10 days, simply log back in and tap Cancel Deletion Request to restore your account. Once the 10 day window expires, your personal identifiers, profile credentials, and associated records are permanently and irrevocably purged from our production databases. 5. Third Party Infrastructure Partners ConnectPi relies on enterprise grade infrastructure providers to deliver high availability and secure data processing: Google Firebase: Secure authentication, Firestore NoSQL cloud database, and Cloud Storage with enterprise access controls. Cloudflare: Global Content Delivery Network (CDN), SSL/TLS terminating edge encryption, and automated DDoS mitigation. Vercel: Edge hosting and serverless application deployment. Google Play Billing: Processes in app purchases and subscription orders for the Android app subject to Google's Privacy Policy. 6. Official Policies & Legal Inquiries For complete legal terms or to exercise your GDPR / data ac"
   },
   {
     "id": "shared/bugs-feedback/how-to-report-a-bug",
