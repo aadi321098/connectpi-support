@@ -2,8 +2,8 @@
   {
     "id": "connectpi-web/getting-started/create-your-profile",
     "url": "/connectpi-web/getting-started/create-your-profile",
-    "title": "How to create your profile on ConnectPi Web",
-    "summary": "Quick guide to setting up your username, bio, and avatar on ConnectPi.",
+    "title": "How to Create and Customize Your Profile on ConnectPi Web",
+    "summary": "Complete guide to updating your display name, bio, avatar, and social links on ConnectPi.",
     "category": "getting-started",
     "categoryTitle": "Getting started",
     "product": "connectpi-web",
@@ -11,15 +11,17 @@
     "productAccent": "#5B2FC9",
     "tags": [
       "profile",
-      "signup",
-      "username"
+      "avatar",
+      "bio",
+      "username",
+      "edit-profile",
+      "links"
     ],
     "headings": [
-      "Before you start",
-      "Step-by-step setup",
-      "Common questions"
+      "Step-by-Step Profile Customization",
+      "Exploring Profile Features"
     ],
-    "body": "Setting up your ConnectPi profile allows you to connect with fellow Pioneers, publish updates, and earn loyalty points. Before you start Ensure you have opened ConnectPi inside the Pi Browser or authenticated with your Pi account. Have an avatar image ready (JPG, PNG, or WebP). Step by step setup Click on the profile avatar icon in the top right header navigation. Select Edit Profile . Enter your desired display name and a brief description introducing yourself to the community. Tap the Upload Photo button, select your image, and click Save Changes . Your Pi wallet address is never made public on your profile. Only your chosen display name and verified username are visible to other members. Common questions [PLACEHOLDER: Add specific profile badges and loyalty tier explanations once finalized.]"
+    "body": "Your ConnectPi profile is your decentralized identity across the Pioneer social ecosystem. Customizing your profile helps you connect with fellow Pioneers, gain followers, and showcase your community contributions. Step by Step Profile Customization Follow these steps to update your personal information and profile appearance: Open your browser and visit: connectpi.in/profile Alternatively, you can click on Profile under the MY SPACE section in the left navigation sidebar. On your main profile overview, locate the Edit Profile button positioned directly below your cover banner, adjacent to your username handle. The Edit Profile modal will open with the following fields: Avatar Photo: Click the camera icon overlaid on your profile picture to upload a new avatar (JPG, PNG, or WebP). Name \\ : Enter your preferred display name. This is the name shown in bold across all your posts, replies, and community feeds. Email: Provide your contact email address (kept private and used for account notifications). Bio: Write a brief introduction about yourself, your Pioneer journey, or your community interests. Links (comma separated): Add external websites, social profiles, or community channels (separate multiple URLs with commas). Once you have updated your information, click the blue Save Changes button in the bottom right corner of the dialog. Your profile will refresh and update immediately! Custom username modification is currently not available on the Web platform. Your username (handle) is permanently linked to your verified registration identifier (such as your Pi Network UID or auto assigned Google handle). A dedicated feature allowing Pioneers to customize or upgrade their username (through future free or premium plan updates) is currently under development. Exploring Profile Features Your ConnectPi profile includes several tools to manage your presence and rewards: View Card: Explore your personalized Profile Card —a shareable digital badge with custom links, QR code, and subscription options. Analytics: Track impressions, post reach, follower growth, and community engagement metrics. Claim Pi & Loyalty Points: Access your daily check in rewards and view your loyalty points balance. Posts & Bookmarks Tabs: Easily filter between your published community posts and articles you have bookmarked for later reading. ConnectPi adheres to strict privacy principles. Your sensitive account details—including your private Pi wallet keys and internal credentials—are never exposed publicly on your profile page."
   },
   {
     "id": "connectpi-web/getting-started/sign-in-with-pi",

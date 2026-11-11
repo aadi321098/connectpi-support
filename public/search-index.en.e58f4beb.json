@@ -1,0 +1,186 @@
+[
+  {
+    "id": "connectpi-web/getting-started/create-your-profile",
+    "url": "/connectpi-web/getting-started/create-your-profile",
+    "title": "How to Create and Customize Your Profile on ConnectPi Web",
+    "summary": "Complete guide to updating your display name, bio, avatar, and social links on ConnectPi.",
+    "category": "getting-started",
+    "categoryTitle": "Getting started",
+    "product": "connectpi-web",
+    "productName": "ConnectPi Web",
+    "productAccent": "#5B2FC9",
+    "tags": [
+      "profile",
+      "avatar",
+      "bio",
+      "username",
+      "edit-profile",
+      "links"
+    ],
+    "headings": [
+      "Step-by-Step Profile Customization",
+      "Exploring Profile Features"
+    ],
+    "body": "Your ConnectPi profile is your decentralized identity across the Pioneer social ecosystem. Customizing your profile helps you connect with fellow Pioneers, gain followers, and showcase your community contributions. Step by Step Profile Customization Follow these steps to update your personal information and profile appearance: Open your browser and visit: connectpi.in/profile Alternatively, you can click on Profile under the MY SPACE section in the left navigation sidebar. On your main profile overview, locate the Edit Profile button positioned directly below your cover banner, adjacent to your username handle. The Edit Profile modal will open with the following fields: Avatar Photo: Click the camera icon overlaid on your profile picture to upload a new avatar (JPG, PNG, or WebP). Name \\ : Enter your preferred display name. This is the name shown in bold across all your posts, replies, and community feeds. Email: Provide your contact email address (kept private and used for account notifications). Bio: Write a brief introduction about yourself, your Pioneer journey, or your community interests. Links (comma separated): Add external websites, social profiles, or community channels (separate multiple URLs with commas). Once you have updated your information, click the blue Save Changes button in the bottom right corner of the dialog. Your profile will refresh and update immediately! Custom username modification is currently not available on the Web platform. Your username (handle) is permanently linked to your verified registration identifier (such as your Pi Network UID or auto assigned Google handle). A dedicated feature allowing Pioneers to customize or upgrade their username (through future free or premium plan updates) is currently under development. Exploring Profile Features Your ConnectPi profile includes several tools to manage your presence and rewards: View Card: Explore your personalized Profile Card —a shareable digital badge with custom links, QR code, and subscription options. Analytics: Track impressions, post reach, follower growth, and community engagement metrics. Claim Pi & Loyalty Points: Access your daily check in rewards and view your loyalty points balance. Posts & Bookmarks Tabs: Easily filter between your published community posts and articles you have bookmarked for later reading. ConnectPi adheres to strict privacy principles. Your sensitive account details—including your private Pi wallet keys and internal credentials—are never exposed publicly on your profile page."
+  },
+  {
+    "id": "connectpi-web/getting-started/sign-in-with-pi",
+    "url": "/connectpi-web/getting-started/sign-in-with-pi",
+    "title": "How to Sign In to ConnectPi with Pi Network",
+    "summary": "Step-by-step guide to signing in to ConnectPi Web inside the Pi Browser or external browsers.",
+    "category": "getting-started",
+    "categoryTitle": "Getting started",
+    "product": "connectpi-web",
+    "productName": "ConnectPi Web",
+    "productAccent": "#5B2FC9",
+    "tags": [
+      "login",
+      "pi-browser",
+      "authentication",
+      "pinet",
+      "signup"
+    ],
+    "headings": [
+      "Method 1: Inside Pi Browser (Recommended for Mobile)",
+      "Method 2: Outside Pi Browser (Desktop, Chrome, or Any Standard Browser)",
+      "Frequently Asked Questions",
+      "Can I change my display name after signing in?",
+      "What happens if I click 'Decline'?"
+    ],
+    "body": "ConnectPi utilizes official Pi Network Authentication so Pioneers can seamlessly create an account and sign in without remembering separate passwords. Your account is securely linked to your verified Pi identity. There are two primary methods to sign in depending on whether you are using the mobile Pi Browser or an external browser. Method 1: Inside Pi Browser (Recommended for Mobile) Signing in through the official Pi Browser provides instant, one tap authentication verified directly by the Pi ecosystem. Launch the official Pi Browser on your smartphone. In the URL address bar at the top of the Pi Browser, enter either of the following addresses: https://connectpi.in/signup https://aditya.pinet.com/signup On the Join or Login to Connect Pi welcome screen, locate the PI BROWSER section at the top and tap the blue Continue with Pi button. An official Pi Network dialog titled 'Share information with Connect Pi ?' will appear. ConnectPi requests the following standard permissions: Auth: Authenticates you on ConnectPi with your verified Pi identity. Username: Synchronizes your public Pi username. Wallet address: Connects your public wallet address for community tipping and reward distributions. In app notifications: Allows the app to notify you about likes, comments, and community updates. Tap the purple Allow button to confirm. Your account is instantly verified and created (or logged in). You will be redirected straight to your ConnectPi community feed where you can start engaging with fellow Pioneers. Official Pi authentication occurs entirely through the automated Pi SDK dialog shown above. ConnectPi will NEVER ask you to enter, paste, or share your 24 word Pi wallet passphrase . If any website asks for your passphrase, close it immediately. Method 2: Outside Pi Browser (Desktop, Chrome, or Any Standard Browser) If you are accessing ConnectPi from a laptop, desktop computer, or any standard mobile browser (such as Google Chrome, Apple Safari, Microsoft Edge, Brave, or Firefox), you can securely log in using a Pi QR Code linked to your phone's Pi Browser. Open your web browser and go to: connectpi.in/signup Scroll to the DESKTOP / CHROME / ANY BROWSER card and click the Sign in with Pi Account button. You will be securely redirected to the official Pi Network authentication portal on accounts.pinet.com . A unique Sign in with Pi QR code will appear on your screen. 1. Open your phone's standard Camera app (or any QR scanner app). 2. Point your camera at the QR code displayed on your desktop monitor. 3. Tap the link banner or pop up notification that appears on your phone screen. The scanned link automatically opens the Pi Browser app on your phone, displaying the 'Share information with Connect Pi ?' authorization screen. Tap the purple Allow button. Once you tap Allow on your phone, your desktop browser will automatically detect the authorization in real time. It will instantly log in or register your account and redirect you directly to your ConnectPi community feed! With QR code authentication, you never have to type passwords or passphrases on your desktop. Your session is securely authenticated through your phone's trusted Pi Browser. Frequently Asked Questions Can I change my display name after signing in? Yes. Your Pi username is permanently attached as your unique Pioneer identifier, but you can set and update your custom profile display name, bio, and avatar anytime under Profile Settings . What happens if I click 'Decline'? If you select Decline on the Pi permissions modal, ConnectPi cannot verify your Pi account, and you will not be able to log in. You can simply tap Continue with Pi again and choose Allow whenever you are ready."
+  },
+  {
+    "id": "connectpi-web/getting-started/sign-up-with-google",
+    "url": "/connectpi-web/getting-started/sign-up-with-google",
+    "title": "How to Sign Up and Login with Google on ConnectPi Web",
+    "summary": "Step-by-step guide to creating your ConnectPi account using Google authentication and logging in with credentials.",
+    "category": "getting-started",
+    "categoryTitle": "Getting started",
+    "product": "connectpi-web",
+    "productName": "ConnectPi Web",
+    "productAccent": "#5B2FC9",
+    "tags": [
+      "google",
+      "signup",
+      "login",
+      "password",
+      "username",
+      "android-app"
+    ],
+    "headings": [
+      "Part 1: How to Sign Up with Google",
+      "Part 2: How to Log In with Your Credentials"
+    ],
+    "body": "In addition to Pi Network authentication, ConnectPi Web allows Pioneers to create an account using Google Authentication and log in securely with their email/username and password. Part 1: How to Sign Up with Google Follow these steps to register your ConnectPi account using your Google profile: Open your browser and navigate to: connectpi.in/signup google Before proceeding, you must check both required confirmation boxes: 1. Terms & Policies: Agree to ConnectPi's Terms of Service , Privacy Policy , and Refund Policy . 2. Age of Majority: Confirm that you have reached the legal age of majority in your jurisdiction (at least 18 years old). Both checkboxes must be selected for the authentication button to activate. Click the blue Authenticate with Google button and choose your preferred Google account from the standard Google Sign In prompt. Once authenticated, ConnectPi verifies your email address as your unique identifier and provides an auto generated username. Click the Continue button. You will be prompted to enter: Display Name: Your community name visible on posts and comments. Bio: A brief introduction about yourself. Avatar: An optional profile picture. Password: Choose a secure password for your account. Submit the form to finalize your account registration! On the Web version, Google sign up assigns an auto generated username. If you want to select a custom username during registration, download the official ConnectPi Mobile App for Android: 👉 Download ConnectPi on Google Play Store (Package ID: in.connectpi.app ) Part 2: How to Log In with Your Credentials Once your account has been registered, you can log in directly at any time using your username/email and password: Go to: connectpi.in/login In the Username or UID field, type your registered username, email address, or UID. In the Password field, type your account password. Click the blue Login button. You will be authenticated immediately and taken to your personal ConnectPi home feed."
+  },
+  {
+    "id": "connectpi-web/account/cant-login",
+    "url": "/connectpi-web/account/cant-login",
+    "title": "I can't log in with Pi Browser",
+    "summary": "Troubleshooting steps for Pi authentication timeouts and session errors.",
+    "category": "account",
+    "categoryTitle": "Account & login",
+    "product": "connectpi-web",
+    "productName": "ConnectPi Web",
+    "productAccent": "#5B2FC9",
+    "tags": [
+      "login",
+      "pi-browser",
+      "error",
+      "auth"
+    ],
+    "headings": [
+      "Quick checklist",
+      "Resolution steps",
+      "Still having trouble?"
+    ],
+    "body": "If you see an authentication timeout or an infinite loading spinner when logging into ConnectPi, follow these quick troubleshooting steps. Quick checklist Make sure you are accessing connectpi.in directly within the official Pi Browser app. Check that your Pi Network account KYC status is active. Resolution steps Force close the Pi Browser app from your mobile task manager and launch it again. In your phone settings, go to Apps Pi Browser Storage and select Clear Cache . Open connectpi.in and tap Sign in with Pi . Accept the permissions prompt when presented. Never share your 24 word Pi passphrase with anyone. ConnectPi will never ask for your passphrase or private keys. Still having trouble? [PLACEHOLDER: Document error codes 5001 and 5002 once authentication microservice is deployed.]"
+  },
+  {
+    "id": "connectpi-app/getting-started/install-the-app",
+    "url": "/connectpi-app/getting-started/install-the-app",
+    "title": "Installing the ConnectPi Android App",
+    "summary": "How to download, install, and grant required permissions for the mobile app.",
+    "category": "getting-started",
+    "categoryTitle": "Installation & setup",
+    "product": "connectpi-app",
+    "productName": "ConnectPi App",
+    "productAccent": "#0F6B63",
+    "tags": [
+      "android",
+      "download",
+      "install",
+      "apk"
+    ],
+    "headings": [
+      "System requirements",
+      "Installation steps"
+    ],
+    "body": "Get real time push notifications, faster messaging, and instant updates with the native ConnectPi mobile application. System requirements Android 9.0 (Pie) or higher. Minimum 50 MB free storage space. Installation steps Download the official package from [PLACEHOLDER: Google Play Store link or Direct APK link]. If installing an APK directly, enable Allow from this source in your Android security settings. Open the app and tap Continue with Pi Network to pair your account. Notification permissions are requested on first launch so you do not miss critical loyalty point rewards or direct messages."
+  },
+  {
+    "id": "blade-rush/gameplay/how-to-play",
+    "url": "/blade-rush/gameplay/how-to-play",
+    "title": "How to play Blade Rush and earn points",
+    "summary": "Understand fruit slicing mechanics, bomb avoidance, and point multiplier streaks.",
+    "category": "gameplay",
+    "categoryTitle": "Gameplay & rewards",
+    "product": "blade-rush",
+    "productName": "Blade Rush",
+    "productAccent": "#8A4B00",
+    "tags": [
+      "blade-rush",
+      "game",
+      "points",
+      "combos"
+    ],
+    "headings": [
+      "Basic rules",
+      "Controls"
+    ],
+    "body": "Blade Rush is an arcade fruit slicing minigame integrated directly into the ConnectPi ecosystem where high scores convert into loyalty reward tokens. Basic rules Swipe across fruits to slice them before they drop off screen. Avoid slicing red hazardous bombs. Chain 3 or more fruits in a single swipe to trigger a Combo Multiplier . Controls Desktop: Click and drag mouse cursor rapidly across flying targets. Mobile / Touchscreen: Swipe your finger across screen. Slicing golden dragonfruits grants an instant 10 second frenzy mode where bomb spawns are paused! [PLACEHOLDER: Add reward conversion table and daily streak bonuses.]"
+  },
+  {
+    "id": "shared/safety-privacy/privacy-overview",
+    "url": "/shared/safety-privacy/privacy-overview",
+    "title": "Privacy and data protection on ConnectPi",
+    "summary": "Understand what data ConnectPi collects, how it is stored, and your privacy choices.",
+    "category": "safety-privacy",
+    "categoryTitle": "Safety & privacy",
+    "product": "shared",
+    "productName": "All Apps",
+    "productAccent": "#5B2FC9",
+    "tags": [
+      "privacy",
+      "security",
+      "data",
+      "gdpr"
+    ],
+    "headings": [
+      "What information is collected",
+      "Controlling your profile privacy"
+    ],
+    "body": "ConnectPi values pioneer privacy and adheres to minimal data collection principles. What information is collected Public username and display handle. Authenticated Pi Network UID (hashed for authentication). Voluntarily posted public discussions and community reactions. ConnectPi operates entirely non custodially. We never request, process, or store your 24 word cryptographic seed passphrase. Controlling your profile privacy You can control who views your active status, loyalty leaderboard position, and notifications directly from your profile settings menu. [PLACEHOLDER: Insert link to full legal privacy policy and data deletion request instructions.]"
+  },
+  {
+    "id": "shared/bugs-feedback/how-to-report-a-bug",
+    "url": "/shared/bugs-feedback/how-to-report-a-bug",
+    "title": "How to report a bug or submit feedback",
+    "summary": "Help improve ConnectPi by sending diagnostic info, screenshots, and reproduction steps.",
+    "category": "bugs-feedback",
+    "categoryTitle": "Bugs & feedback",
+    "product": "shared",
+    "productName": "All Apps",
+    "productAccent": "#5B2FC9",
+    "tags": [
+      "bug",
+      "feedback",
+      "support",
+      "error"
+    ],
+    "headings": [
+      "What to include in a bug report"
+    ],
+    "body": "Found a glitch or an unexpected behavior? Reporting clear steps helps our engineering team deploy rapid bug fixes. What to include in a bug report 1. Device & OS: What phone or browser (e.g. Android 13, Pi Browser v1.6.1, Chrome 122). 2. Steps to reproduce: What action you performed immediately prior to the error. 3. Expected vs Actual behavior: What should have happened compared to what actually happened. Use our structured contact form to automatically attach device and browser diagnostics."
+  }
+]
