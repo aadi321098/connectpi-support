@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "getting-started",
+    "title": "Installation & setup",
+    "description": "Download, install, and configure the ConnectPi mobile app.",
+    "icon": "smartphone",
+    "order": 1
+  }
+]

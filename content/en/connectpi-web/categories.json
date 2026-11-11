@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "getting-started",
+    "title": "Getting started",
+    "description": "Create your profile, sign in with Pi and learn the web basics.",
+    "icon": "check",
+    "order": 1
+  },
+  {
+    "slug": "account",
+    "title": "Account & login",
+    "description": "Login troubleshooting, profile updates, and security.",
+    "icon": "user",
+    "order": 2
+  }
+]

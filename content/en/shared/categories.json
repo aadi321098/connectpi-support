@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "safety-privacy",
+    "title": "Safety & privacy",
+    "description": "Account security, data protection policies, and blocking abusers.",
+    "icon": "shield",
+    "order": 1
+  },
+  {
+    "slug": "bugs-feedback",
+    "title": "Bugs & feedback",
+    "description": "Report unexpected errors or suggest new features to the engineering team.",
+    "icon": "alert-triangle",
+    "order": 2
+  }
+]
