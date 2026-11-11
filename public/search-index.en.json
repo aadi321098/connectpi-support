@@ -130,8 +130,8 @@
   {
     "id": "connectpi-app/getting-started/install-the-app",
     "url": "/connectpi-app/getting-started/install-the-app",
-    "title": "Installing the ConnectPi Android App",
-    "summary": "How to download, install, and grant required permissions for the mobile app.",
+    "title": "Installing the ConnectPi Android App from Google Play Store",
+    "summary": "Step-by-step guide to installing the official ConnectPi Android app, choosing custom usernames, configuring permissions, and connecting your Pi account.",
     "category": "getting-started",
     "categoryTitle": "Installation & setup",
     "product": "connectpi-app",
@@ -139,15 +139,20 @@
     "productAccent": "#0F6B63",
     "tags": [
       "android",
+      "play-store",
       "download",
       "install",
-      "apk"
+      "custom-username",
+      "permissions"
     ],
     "headings": [
-      "System requirements",
-      "Installation steps"
+      "1. Why Download the Android App?",
+      "2. Installation via Google Play Store",
+      "3. Account Setup & Custom Username Selection",
+      "4. App Permissions Guide",
+      "5. System Requirements & Specifications"
     ],
-    "body": "Get real time push notifications, faster messaging, and instant updates with the native ConnectPi mobile application. System requirements Android 9.0 (Pie) or higher. Minimum 50 MB free storage space. Installation steps Download the official package from [PLACEHOLDER: Google Play Store link or Direct APK link]. If installing an APK directly, enable Allow from this source in your Android security settings. Open the app and tap Continue with Pi Network to pair your account. Notification permissions are requested on first launch so you do not miss critical loyalty point rewards or direct messages."
+    "body": "The native ConnectPi Android App delivers the fastest mobile social experience for Pioneers worldwide, featuring real time push notifications, offline feed caching, daily reward streak reminders, and custom username creation. 1. Why Download the Android App? While ConnectPi Web is accessible from any desktop or mobile browser, the native Android app unlocks exclusive mobile benefits: Custom Username Selection: Choose your own unique Pioneer handle (e.g. @pioneer alex ) during registration, rather than receiving an auto generated username. Instant Push Alerts: Get real time notifications when Pioneers mention you, comment on your posts, or send peer messages. Daily Check in & Quests: Never miss your daily CP token claim with streak reminder notifications. Integrated Camera & Media: Snap photos and record videos directly inside the post editor without leaving the application. 2. Installation via Google Play Store Follow these steps to install the official app safely on your Android device: Open the official ConnectPi store page on your Android smartphone: 👉 Download Connect Pi on Google Play Store (Package ID: in.connectpi.app | Verified Developer: Connect Pi) Tap the green Install button. The Play Store will verify the package signature and download the application ( 30–45 MB). Once installation finishes, tap Open or launch the Connect Pi app icon from your home screen or app drawer. 3. Account Setup & Custom Username Selection When you launch ConnectPi for the first time, you can sign in with your existing account or create a brand new Pioneer profile: Choose Sign up with Google or Continue with Pi Network . Unlike the web onboarding flow which assigns an automatic handle, the Android app provides an interactive Username Picker : Choose a unique handle (e.g. yourname or pioneer crypto ). Usernames can contain lowercase alphanumeric letters, digits, and underscores. ConnectPi will check availability in real time. Add your display name, a brief bio introducing yourself to the community, and upload a profile avatar. 4. App Permissions Guide To deliver core community features, ConnectPi requests standard Android runtime permissions. Here is why each permission is required: | Permission | Category | Purpose in ConnectPi | Mandatory? | | | | |: :| | POST NOTIFICATIONS | Notifications | Delivers instant alerts for daily CP check in rewards, mentions, and incoming direct messages. | Recommended | | CAMERA | Media Capture | Allows taking live photos and short videos directly within the post composer. | Optional | | READ MEDIA IMAGES | Storage / Gallery | Required to select and upload photos or screenshots from your photo gallery. | Recommended | | ACCESS COARSE LOCATION | Location | Powers the optional Locality Feed and regional Pioneer marketplace discovery. | Optional | You can manage or revoke optional permissions (such as Location or Camera) at any time from your device's Settings Apps Connect Pi Permissions . 5. System Requirements & Specifications Operating System: Android 8.0 (API Level 26) or higher (Android 9.0+ recommended). Free Storage Space: Minimum 50 MB for app installation and media cache. Internet Connectivity: Stable 4G, 5G, or Wi Fi connection. Package Identifier: in.connectpi.app Always verify that you are downloading ConnectPi with the exact package ID in.connectpi.app on the official Google Play Store. Never install APK files from untrusted third party websites or Telegram groups. Remember: ConnectPi will never ask for your 24 word Pi wallet passphrase."
   },
   {
     "id": "blade-rush/gameplay/how-to-play",

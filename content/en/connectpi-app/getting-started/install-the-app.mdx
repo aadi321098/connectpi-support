@@ -1,37 +1,119 @@
 ---
-title: "Installing the ConnectPi Android App"
-summary: "How to download, install, and grant required permissions for the mobile app."
+title: "Installing the ConnectPi Android App from Google Play Store"
+summary: "Step-by-step guide to installing the official ConnectPi Android app, choosing custom usernames, configuring permissions, and connecting your Pi account."
 category: "getting-started"
-order: 10
+order: 1
 featured: true
-tags: ["android", "download", "install", "apk"]
-updated: "2026-11-10"
+tags: ["android", "play-store", "download", "install", "custom-username", "permissions"]
+related: ["getting-started/sign-in-with-pi", "getting-started/sign-up-with-google"]
+updated: "2026-11-11"
 published: true
 platform: ["android"]
+faq:
+  - q: "Where can I download the official ConnectPi Android app?"
+    a: "You can install the official verified app directly from the Google Play Store under package ID in.connectpi.app (https://play.google.com/store/apps/details?id=in.connectpi.app)."
+  - q: "Can I choose a custom username in the mobile app?"
+    a: "Yes! While the web portal currently provides an auto-generated username for Google sign-ups, the native Android app allows you to choose your own unique custom Pioneer handle during onboarding."
+  - q: "Which Android versions are supported?"
+    a: "ConnectPi supports devices running Android 8.0 (Oreo) and higher, with Android 9.0 (Pie) or newer recommended."
+  - q: "Does the app require my 24-word Pi passphrase?"
+    a: "No! ConnectPi never asks for or stores your 24-word cryptographic passphrase. Authentication is handled securely through the official Pi Network SDK OAuth bridge."
 ---
 
-Get real-time push notifications, faster messaging, and instant updates with the native ConnectPi mobile application.
+The native **ConnectPi Android App** delivers the fastest mobile social experience for Pioneers worldwide, featuring real-time push notifications, offline feed caching, daily reward streak reminders, and custom username creation.
 
-## System requirements
-- Android 9.0 (Pie) or higher.
-- Minimum 50 MB free storage space.
+---
 
-## Installation steps
+## 1. Why Download the Android App?
+
+While ConnectPi Web is accessible from any desktop or mobile browser, the native Android app unlocks exclusive mobile benefits:
+
+- **Custom Username Selection:** Choose your own unique Pioneer handle (e.g. `@pioneer_alex`) during registration, rather than receiving an auto-generated username.
+- **Instant Push Alerts:** Get real-time notifications when Pioneers mention you, comment on your posts, or send peer messages.
+- **Daily Check-in & Quests:** Never miss your daily CP token claim with streak reminder notifications.
+- **Integrated Camera & Media:** Snap photos and record videos directly inside the post editor without leaving the application.
+
+---
+
+## 2. Installation via Google Play Store
+
+Follow these steps to install the official app safely on your Android device:
+
 <Steps>
-  <Step title="Download the APK or open Google Play Store">
-    Download the official package from [PLACEHOLDER: Google Play Store link or Direct APK link].
+  <Step title="Open the Google Play Store listing">
+    Open the official ConnectPi store page on your Android smartphone:
+    
+    👉 **[Download Connect Pi on Google Play Store](https://play.google.com/store/apps/details?id=in.connectpi.app)**
+    
+    *(Package ID: `in.connectpi.app` | Verified Developer: Connect Pi)*
   </Step>
-  <Step title="Permit installation if sideloading">
-    If installing an APK directly, enable **Allow from this source** in your Android security settings.
+
+  <Step title="Install the application">
+    Tap the green **Install** button. The Play Store will verify the package signature and download the application (~30–45 MB).
   </Step>
-  <Step title="Launch and connect">
-    Open the app and tap **Continue with Pi Network** to pair your account.
+
+  <Step title="Launch Connect Pi">
+    Once installation finishes, tap **Open** or launch the **Connect Pi** app icon from your home screen or app drawer.
   </Step>
 </Steps>
 
-<Callout type="note" title="Note">
-Notification permissions are requested on first launch so you do not miss critical loyalty point rewards or direct messages.
+---
+
+## 3. Account Setup & Custom Username Selection
+
+When you launch ConnectPi for the first time, you can sign in with your existing account or create a brand-new Pioneer profile:
+
+<Steps>
+  <Step title="Select your signup method">
+    Choose **Sign up with Google** or **Continue with Pi Network**.
+  </Step>
+
+  <Step title="Choose your custom Pioneer username">
+    Unlike the web onboarding flow which assigns an automatic handle, the Android app provides an interactive **Username Picker**:
+    - Choose a unique handle (e.g. `yourname` or `pioneer_crypto`).
+    - Usernames can contain lowercase alphanumeric letters, digits, and underscores.
+    - ConnectPi will check availability in real time.
+  </Step>
+
+  <Step title="Complete your basic profile">
+    Add your display name, a brief bio introducing yourself to the community, and upload a profile avatar.
+  </Step>
+</Steps>
+
+---
+
+## 4. App Permissions Guide
+
+To deliver core community features, ConnectPi requests standard Android runtime permissions. Here is why each permission is required:
+
+| Permission | Category | Purpose in ConnectPi | Mandatory? |
+|---|---|---|:---:|
+| **POST_NOTIFICATIONS** | Notifications | Delivers instant alerts for daily CP check-in rewards, mentions, and incoming direct messages. | Recommended |
+| **CAMERA** | Media Capture | Allows taking live photos and short videos directly within the post composer. | Optional |
+| **READ_MEDIA_IMAGES** | Storage / Gallery | Required to select and upload photos or screenshots from your photo gallery. | Recommended |
+| **ACCESS_COARSE_LOCATION** | Location | Powers the optional **Locality Feed** and regional Pioneer marketplace discovery. | Optional |
+
+<Callout type="tip" title="Privacy Control">
+  You can manage or revoke optional permissions (such as Location or Camera) at any time from your device's **Settings > Apps > Connect Pi > Permissions**.
 </Callout>
 
-<ContactCTA app="connectpi-app" />
+---
 
+## 5. System Requirements & Specifications
+
+- **Operating System:** Android 8.0 (API Level 26) or higher (Android 9.0+ recommended).
+- **Free Storage Space:** Minimum 50 MB for app installation and media cache.
+- **Internet Connectivity:** Stable 4G, 5G, or Wi-Fi connection.
+- **Package Identifier:** `in.connectpi.app`
+
+---
+
+<Callout type="warning" title="Security & Phishing Warning">
+  Always verify that you are downloading ConnectPi with the exact package ID `in.connectpi.app` on the official Google Play Store. Never install APK files from untrusted third-party websites or Telegram groups.
+  
+  **Remember:** ConnectPi will never ask for your 24-word Pi wallet passphrase.
+</Callout>
+
+---
+
+<ContactCTA app="connectpi-app" />
