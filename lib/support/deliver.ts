@@ -85,7 +85,7 @@ If you have additional details, logs, or screenshots to share, please retain thi
 
 Best regards,
 ConnectPi Support Team
-https://help.connectpi.in
+https://support.connectpi.in
 
 ======================================================================
 NOTE: This is an automated notification confirming your ticket submission. Please do not reply directly to this automated email.
