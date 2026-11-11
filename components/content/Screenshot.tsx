@@ -24,7 +24,7 @@ export function Screenshot({
           alt={alt}
           width={width}
           height={height}
-          className="w-full h-auto object-cover max-h-[500px]"
+          className="w-full h-auto object-contain max-h-[520px] mx-auto bg-surface"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 720px, 800px"
         />
       </div>
