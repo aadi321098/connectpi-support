@@ -50,16 +50,16 @@ export function Header() {
                   className="inline-flex items-center gap-2 px-3 py-1 rounded-r-pill border border-border bg-surface hover:bg-surface-tint text-xs font-semibold text-ink transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus"
                   aria-expanded={isAppMenuOpen}
                   aria-haspopup="listbox"
-                  aria-label={t("switchApp")}
                 >
                   <span
-                    className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0"
+                    aria-hidden="true"
+                    className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 select-none"
                     style={{ backgroundColor: activeProduct.accent }}
                   >
                     {activeProduct.initial}
                   </span>
                   <span>{activeProduct.name}</span>
-                  <ChevronDown className="w-3.5 h-3.5 text-ink-muted" />
+                  <ChevronDown aria-hidden="true" className="w-3.5 h-3.5 text-ink-muted" />
                 </button>
 
                 {isAppMenuOpen && (

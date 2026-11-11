@@ -9,6 +9,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - Phase 5 (Launch Preparation & Handover)
+- Production launch checklist (`docs/LAUNCH_CHECKLIST.md`):
+  - DNS configuration for `support.connectpi.in` (Vercel CNAME & Cloudflare proxy setup).
+  - Resend domain setup with SPF, DKIM, and DMARC records for `connectpi.in`.
+  - Cloudflare Turnstile bot protection setup guide.
+  - Upstash Redis serverless rate limiter setup.
+  - Sentry DSN configuration and cookieless analytics setup.
+  - Comprehensive copy-paste `.env.production` snippet.
+- Content Placeholder Audit script & report:
+  - `scripts/audit-placeholders.ts` scanning all MDX files for `[PLACEHOLDER: ...]` tags.
+  - `docs/PLACEHOLDER_AUDIT.md` itemizing all pending placeholders by product, category, and line number.
+- Client Application Integration Guide (`docs/APP_INTEGRATION_GUIDE.md`):
+  - React/Next.js component snippet for ConnectPi Web app footer.
+  - React Native module and settings screen row for ConnectPi Mobile App.
+  - Flutter service snippet for Blade Rush.
+- v1.0.0 Release Notes (`docs/LAUNCH_NOTES.md`).
+
+### Added - Phase 4 (Hardening, SEO, Performance & A11y)
+- Production Hardening & Security:
+  - Cloudflare real client IP resolver (`lib/support/ip.ts`) inspecting `cf-connecting-ip` first, preventing edge proxy lockouts.
+  - Subnet masking (`/24` for IPv4, `/64` for IPv6) to comply with privacy regulations.
+  - Legacy URL redirect map (`redirects.json`) wired into `next.config.ts`.
+- Search Engine Optimization (SEO):
+  - Dynamic XML sitemap (`app/sitemap.ts`) generating URLs for all products, categories, articles, and static pages.
+  - Dynamic Open Graph social cards (`app/opengraph-image.tsx` and per-article `[locale]/[product]/[category]/[article]/opengraph-image.tsx`) using `next/og`.
+  - Canonical links and Google `WebSite` SearchAction JSON-LD structured data.
+- Accessibility & WCAG 2.1 Compliance:
+  - Color contrast verification script (`scripts/check-contrast.ts`) evaluating all token pairs from `DESIGN_SYSTEM.md`.
+  - Verification report (`docs/A11Y_REPORT.md`): 100% of token pairs pass WCAG 2.1 AA (up to 17.5:1), with 10 pairs passing AAA.
+  - Automated Axe-core accessibility test suite (`tests/a11y.spec.ts`) across mobile, tablet, and desktop viewports.
+  - Interactive heading anchor links with hover/focus disclosure.
+  - Media print stylesheet (`@media print` in `styles/globals.css`) for clean article printouts.
+  - Accessible 404 page (`app/[locale]/not-found.tsx`) with search bar and product jump links.
+- Error Handling & Analytics:
+  - Global error boundary with retry trigger (`app/[locale]/error.tsx`).
+  - Privacy-friendly cookieless analytics dispatcher (`lib/analytics.ts`) respecting `features.enableAnalytics`.
+- Operations & Documentation:
+  - Comprehensive `README.md` and authoring guide `CONTRIBUTING.md`.
+  - Incident response and operational runbook (`docs/RUNBOOK.md`).
+
 ### Added - Phase 3
 - Production contact & support system (`lib/support/`):
   - Shared Zod schema (`lib/support/schema.ts`) covering 4 inquiry types (Question, Bug report, Account issue, Feedback).

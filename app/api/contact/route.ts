@@ -4,6 +4,7 @@ import { ContactFormSchema } from "@/lib/support/schema";
 import { checkRateLimit } from "@/lib/support/ratelimit";
 import { verifyTurnstileToken } from "@/lib/support/turnstile";
 import { deliverContactMessage } from "@/lib/support/deliver";
+import { getClientIp } from "@/lib/support/ip";
 
 const MAX_BODY_BYTES = 16 * 1024; // 16 KB
 
@@ -46,11 +47,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, requestId });
   }
 
-  // 3. Rate limiting (IP & email)
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
-    req.headers.get("x-real-ip") ||
-    "127.0.0.1";
+  // 3. Rate limiting (IP & email) using real client IP
+  const ip = getClientIp(req);
 
   const rateCheck = await checkRateLimit(`contact:${ip}`, 5, 3600);
   if (!rateCheck.success) {

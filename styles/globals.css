@@ -141,3 +141,55 @@ h1, h2, h3, h4, h5, h6 {
 .safe-padding-bottom {
   padding-bottom: max(24px, env(safe-area-inset-bottom));
 }
+
+/* Print Stylesheet */
+@media print {
+  header,
+  footer,
+  nav,
+  aside,
+  button,
+  form,
+  .no-print,
+  [data-testid="mobile-drawer"],
+  [data-testid="search-field"],
+  [data-testid="feedback-widget"],
+  [data-testid="toc-rail"],
+  [data-testid="topic-switcher"],
+  [data-testid="related-articles"] {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  pre,
+  blockquote,
+  table,
+  figure {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #000000 !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+}
+

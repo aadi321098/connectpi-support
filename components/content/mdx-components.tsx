@@ -29,8 +29,9 @@ export const mdxComponents = {
       {id && (
         <a
           href={`#${id}`}
-          className="text-ink-muted/40 hover:text-brand text-sm opacity-0 group-hover:opacity-100 transition-opacity ml-2 p-1"
-          aria-label={`Link to ${children}`}
+          className="text-ink-muted/50 hover:text-brand focus-visible:opacity-100 text-base opacity-0 group-hover:opacity-100 transition-opacity ml-2 p-1 rounded font-normal"
+          aria-label="Direct link to this section"
+          title="Direct link to this section"
         >
           #
         </a>
@@ -40,10 +41,20 @@ export const mdxComponents = {
   h3: ({ children, id, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       id={id}
-      className="font-heading font-bold text-lg sm:text-xl text-ink mt-6 mb-3 scroll-mt-24"
+      className="font-heading font-bold text-lg sm:text-xl text-ink mt-6 mb-3 scroll-mt-24 group flex items-center justify-between"
       {...props}
     >
-      {children}
+      <span>{children}</span>
+      {id && (
+        <a
+          href={`#${id}`}
+          className="text-ink-muted/50 hover:text-brand focus-visible:opacity-100 text-sm opacity-0 group-hover:opacity-100 transition-opacity ml-2 p-1 rounded font-normal"
+          aria-label="Direct link to this section"
+          title="Direct link to this section"
+        >
+          #
+        </a>
+      )}
     </h3>
   ),
   p: ({ children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (

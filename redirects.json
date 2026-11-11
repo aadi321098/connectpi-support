@@ -1,0 +1,7 @@
+[
+  {
+    "source": "/help",
+    "destination": "/",
+    "permanent": true
+  }
+]

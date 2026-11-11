@@ -28,7 +28,6 @@ export function TopicSwitcher({
           onClick={() => setIsOpen((prev) => !prev)}
           className="w-full flex items-center justify-between px-4 py-3 bg-surface border border-border rounded-r-md text-sm font-semibold text-ink shadow-sm"
           aria-expanded={isOpen}
-          aria-label="Topics menu"
         >
           <span>
             Topic: <strong className="text-brand">{activeCategory?.title || "Select Topic"}</strong>

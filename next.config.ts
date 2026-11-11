@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import fs from "fs";
+import path from "path";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+let redirectsList: { source: string; destination: string; permanent: boolean }[] = [];
+try {
+  const redirectsPath = path.join(process.cwd(), "redirects.json");
+  if (fs.existsSync(redirectsPath)) {
+    redirectsList = JSON.parse(fs.readFileSync(redirectsPath, "utf-8"));
+  }
+} catch {
+  redirectsList = [];
+}
 
 const securityHeaders = [
   {
@@ -33,6 +45,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    return redirectsList;
+  },
   async headers() {
     return [
       {

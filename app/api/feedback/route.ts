@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { checkRateLimit } from "@/lib/support/ratelimit";
+import { getClientIp } from "@/lib/support/ip";
 
 const FeedbackSchema = z.object({
   path: z.string().min(1).max(200),
@@ -9,10 +10,7 @@ const FeedbackSchema = z.object({
 
 export async function POST(req: NextRequest) {
   try {
-    const ip =
-      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
-      req.headers.get("x-real-ip") ||
-      "127.0.0.1";
+    const ip = getClientIp(req);
 
     // Rate limit: max 30 feedbacks per hour per IP
     const rateCheck = await checkRateLimit(`feedback:${ip}`, 30, 3600);

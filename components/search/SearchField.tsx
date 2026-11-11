@@ -226,64 +226,66 @@ export function SearchField({
 
       {/* Combobox Instant Suggestions Popover / Overlay */}
       {isOpen && suggestions.length > 0 && (
-        <ul
-          id={listboxId}
-          role="listbox"
-          aria-label="Search suggestions"
-          className="absolute left-0 right-0 top-full mt-1.5 bg-surface border border-border rounded-r-lg shadow-overlay py-2 z-50 animate-in fade-in zoom-in-95 duration-100 max-h-80 overflow-y-auto"
-        >
-          {suggestions.map((item, index) => {
-            const isSelected = index === activeIndex;
-            return (
-              <li
-                key={item.id}
-                id={`${listboxId}-option-${index}`}
-                role="option"
-                aria-selected={isSelected}
-                tabIndex={0}
-                onMouseEnter={() => setActiveIndex(index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
+        <div className="absolute left-0 right-0 top-full mt-1.5 bg-surface border border-border rounded-r-lg shadow-overlay py-2 z-50 animate-in fade-in zoom-in-95 duration-100 max-h-80 overflow-y-auto">
+          <ul
+            id={listboxId}
+            role="listbox"
+            aria-label="Search suggestions"
+          >
+            {suggestions.map((item, index) => {
+              const isSelected = index === activeIndex;
+              return (
+                <li
+                  key={item.id}
+                  id={`${listboxId}-option-${index}`}
+                  role="option"
+                  aria-selected={isSelected}
+                  tabIndex={0}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      router.push(item.url);
+                      setIsOpen(false);
+                    }
+                  }}
+                  onClick={() => {
                     router.push(item.url);
                     setIsOpen(false);
-                  }
-                }}
-                onClick={() => {
-                  router.push(item.url);
-                  setIsOpen(false);
-                }}
-                className={`px-4 py-2.5 flex items-center justify-between cursor-pointer transition-colors ${
-                  isSelected ? "bg-surface-tint text-brand" : "text-ink hover:bg-surface-tint/60"
-                }`}
-              >
-                <div className="flex items-center gap-2.5 truncate">
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: item.productAccent }}
-                  />
-                  <div className="truncate">
-                    <span className="font-medium text-sm block truncate">
-                      {item.title}
-                    </span>
-                    <span className="text-xs text-ink-muted truncate block">
-                      {item.productName} • {item.categoryTitle}
-                    </span>
+                  }}
+                  className={`px-4 py-2.5 flex items-center justify-between cursor-pointer transition-colors ${
+                    isSelected ? "bg-surface-tint text-brand" : "text-ink hover:bg-surface-tint/60"
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5 truncate">
+                    <span
+                      className="w-2 h-2 rounded-full shrink-0"
+                      style={{ backgroundColor: item.productAccent }}
+                    />
+                    <div className="truncate">
+                      <span className="font-medium text-sm block truncate">
+                        {item.title}
+                      </span>
+                      <span className="text-xs text-ink-muted truncate block">
+                        {item.productName} • {item.categoryTitle}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-ink-muted shrink-0 ml-2" />
-              </li>
-            );
-          })}
-          <li className="pt-2 mt-1 border-t border-border px-4">
+                  <ArrowRight className="w-4 h-4 text-ink-muted shrink-0 ml-2" />
+                </li>
+              );
+            })}
+          </ul>
+          <div className="pt-2 mt-1 border-t border-border px-4">
             <button
+              type="button"
               onClick={() => handleSubmit()}
               className="text-xs font-semibold text-brand hover:underline w-full text-left py-1"
             >
               See all results for &quot;{query}&quot; →
             </button>
-          </li>
-        </ul>
+          </div>
+        </div>
       )}
     </div>
   );
