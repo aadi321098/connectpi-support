@@ -71,25 +71,25 @@ ${data.message}
       const userContent = `
 Hi ${data.name},
 
-Thank you for reaching out to ConnectPi Support! We have received your request.
+Thank you for contacting ConnectPi Support. We have safely received your request.
 
---- Your Ticket Details ---
+--- Ticket Summary ---
 • Ticket ID: #${requestId}
 • Product: ${productName}
 • Request Type: ${data.type.toUpperCase()}
 • Subject: ${data.subject}
 
-Our support team is reviewing your inquiry and will contact you within 24 to 48 hours at this email address (${data.email}).
+Our support team is currently reviewing your inquiry and will follow up with you within 24 to 48 business hours at this email address (${data.email}).
 
-If you have additional details or screenshots to share, please hold on to this Ticket ID for quick reference.
+If you have additional details, logs, or screenshots to share, please retain this Ticket ID for your reference.
 
 Best regards,
 ConnectPi Support Team
 https://help.connectpi.in
 
-==================================================
-NOTE: Yeh ek automated confirmation email hai to confirm that your request was safely received. Kripya is automated email ka direct reply na karein.
-==================================================
+======================================================================
+NOTE: This is an automated notification confirming your ticket submission. Please do not reply directly to this automated email.
+======================================================================
       `.trim();
 
       await resend.emails.send({
