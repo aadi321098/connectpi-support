@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "connectpi-web",
+    "name": "ConnectPi Web",
+    "type": "web",
+    "description": "Social hub on connectpi.in: profile, posts, loyalty points.",
+    "initial": "W",
+    "accent": "#5B2FC9",
+    "tint": "#EFE9FF",
+    "order": 1,
+    "url": "https://connectpi.in",
+    "status": "active"
+  },
+  {
+    "slug": "connectpi-app",
+    "name": "ConnectPi App",
+    "type": "android",
+    "description": "The mobile app: install, updates, notifications, login.",
+    "initial": "A",
+    "accent": "#0F6B63",
+    "tint": "#DDF3F0",
+    "order": 2,
+    "url": "https://play.google.com/store/apps",
+    "status": "active"
+  },
+  {
+    "slug": "blade-rush",
+    "name": "Blade Rush",
+    "type": "game",
+    "description": "Fruit slicing game: gameplay, purchases, ads and rewards.",
+    "initial": "B",
+    "accent": "#8A4B00",
+    "tint": "#FFEBC7",
+    "order": 3,
+    "url": "https://connectpi.in/games/blade-rush",
+    "status": "active"
+  }
+]

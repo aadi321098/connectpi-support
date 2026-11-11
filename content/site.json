@@ -1,0 +1,35 @@
+{
+  "siteName": "ConnectPi Support",
+  "tagline": "How can we help you today?",
+  "supportEmail": "support@connectpi.in",
+  "externalAppUrl": "https://connectpi.in",
+  "externalAppLabel": "Open ConnectPi",
+  "popularSearches": [
+    "Login with Pi",
+    "Account verification",
+    "Loyalty points",
+    "Reset password"
+  ],
+  "navLinks": [
+    { "label": "Help Center", "href": "/" },
+    { "label": "Categories", "href": "/#topics" },
+    { "label": "Safety & Privacy", "href": "/shared/safety-privacy" },
+    { "label": "Contact us", "href": "/contact" }
+  ],
+  "footer": {
+    "brandDescription": "Fast, friendly help for ConnectPi Web, ConnectPi App, and Blade Rush.",
+    "copyright": "© 2026 ConnectPi. All rights reserved.",
+    "links": {
+      "help": [
+        { "label": "All Topics", "href": "/#topics" },
+        { "label": "Popular Articles", "href": "/#popular" },
+        { "label": "Contact Support", "href": "/contact" }
+      ],
+      "legal": [
+        { "label": "Privacy Policy", "href": "/legal/privacy" },
+        { "label": "Terms of Service", "href": "/legal/terms" },
+        { "label": "Community Guidelines", "href": "/legal/community-guidelines" }
+      ]
+    }
+  }
+}

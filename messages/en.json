@@ -1,0 +1,45 @@
+{
+  "common": {
+    "skipToContent": "Skip to main content",
+    "search": "Search",
+    "searchPlaceholder": "Search articles, guides, topics...",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "back": "Back",
+    "allApps": "All apps",
+    "selectApp": "Select product",
+    "switchApp": "Switch app",
+    "openExternalApp": "Open ConnectPi",
+    "readMore": "Read more",
+    "lastUpdated": "Last updated",
+    "helpfulQuestion": "Was this article helpful?",
+    "yes": "Yes",
+    "no": "No",
+    "thankYouFeedback": "Thank you for your feedback!",
+    "relatedArticles": "Related articles",
+    "onThisPage": "On this page",
+    "tableOfContents": "Table of Contents",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "stillNeedHelp": "Still need help?",
+    "contactSupport": "Contact Support",
+    "reportBug": "Report a Bug",
+    "popularArticles": "Popular articles",
+    "browseByTopic": "Browse by topic",
+    "chooseYourApp": "Choose your app"
+  },
+  "nav": {
+    "helpCenter": "Help Center",
+    "categories": "Categories",
+    "safetyPrivacy": "Safety & Privacy",
+    "contact": "Contact us"
+  },
+  "footer": {
+    "products": "Products",
+    "help": "Help & Resources",
+    "legal": "Legal",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
