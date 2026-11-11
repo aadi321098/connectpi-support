@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
-import { Container } from "./Container";
 import siteConfig from "@/content/site.json";
 import products from "@/content/products.json";
 import { useTranslations } from "next-intl";
@@ -14,7 +13,7 @@ export function Footer() {
       role="contentinfo"
       className="bg-ink text-footer-text mt-auto border-t border-ink-body/20 safe-padding-bottom"
     >
-      <Container className="py-12 md:py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="max-w-sm">
@@ -115,7 +114,7 @@ export function Footer() {
             </a>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

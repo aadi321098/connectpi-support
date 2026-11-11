@@ -118,7 +118,7 @@ export default async function ProductHubPage({ params }: ProductHubPageProps) {
           />
 
           {/* Topics Grid */}
-          <div className="flex-1 w-full min-w-0 max-w-4xl">
+          <div className="flex-1 w-full min-w-0">
             <h2 className="font-heading font-bold text-xl sm:text-2xl text-ink mb-6">
               Browse {product.name} Topics
             </h2>

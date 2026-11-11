@@ -80,6 +80,16 @@ export function ContactForm() {
       return;
     }
 
+    // Client-side Turnstile check
+    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+    if (siteKey && (!formData.turnstileToken || formData.turnstileToken.trim().length === 0)) {
+      setErrors((prev) => ({
+        ...prev,
+        turnstileToken: "Please complete the security check above before submitting.",
+      }));
+      return;
+    }
+
     setErrors({});
     setFormState("submitting");
 
@@ -182,8 +192,8 @@ export function ContactForm() {
         </div>
       )}
 
-      {/* Honeypot field (hidden from genuine users) */}
-      <div className="sr-only" aria-hidden="true">
+      {/* Honeypot field (strictly hidden from genuine users) */}
+      <div style={{ display: "none" }} aria-hidden="true">
         <label htmlFor="hp_field">Do not fill this field</label>
         <input
           id="hp_field"
@@ -396,10 +406,22 @@ export function ContactForm() {
       {/* Turnstile Anti-Spam Widget */}
       <div>
         <TurnstileWidget
-          onVerify={(token) => updateField("turnstileToken", token)}
+          onVerify={(token) => {
+            updateField("turnstileToken", token);
+            if (errors.turnstileToken) {
+              setErrors((prev) => {
+                const next = { ...prev };
+                delete next.turnstileToken;
+                return next;
+              });
+            }
+          }}
         />
         {errors.turnstileToken && (
-          <p className="text-xs text-danger mt-1">{errors.turnstileToken}</p>
+          <div className="flex items-center gap-1.5 text-xs text-danger mt-1.5 font-medium animate-in fade-in">
+            <AlertTriangle className="w-4 h-4 shrink-0 text-danger" />
+            <span>{errors.turnstileToken}</span>
+          </div>
         )}
       </div>
 

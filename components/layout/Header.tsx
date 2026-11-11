@@ -3,7 +3,6 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
-import { Container } from "./Container";
 import { MobileDrawer } from "./MobileDrawer";
 import { Button } from "@/components/ui/Button";
 import { Menu, Search, ExternalLink, ChevronDown } from "lucide-react";
@@ -28,7 +27,7 @@ export function Header() {
         role="banner"
         className="w-full bg-surface border-b border-border transition-all duration-200 z-40 sticky top-0"
       >
-        <Container className="flex items-center justify-between h-14 md:h-16 lg:h-[72px]">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between h-14 md:h-16 lg:h-[72px]">
           {/* Left section: Logo & App Switcher Pill */}
           <div className="flex items-center gap-3 sm:gap-4">
             <Link
@@ -162,7 +161,7 @@ export function Header() {
               <Menu className="w-6 h-6" />
             </button>
           </div>
-        </Container>
+        </div>
       </header>
 
       {/* Mobile Drawer (Dialog) */}
