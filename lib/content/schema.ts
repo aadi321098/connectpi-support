@@ -64,3 +64,4 @@ export interface Article extends ArticleMeta {
   content: string;
   headings: TocHeading[];
 }
+

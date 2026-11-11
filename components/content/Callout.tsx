@@ -52,3 +52,4 @@ export function Callout({ type = "note", title, children }: CalloutProps) {
     </aside>
   );
 }
+

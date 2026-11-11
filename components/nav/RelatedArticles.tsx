@@ -46,3 +46,4 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
     </section>
   );
 }
+

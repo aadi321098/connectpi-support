@@ -1,11 +1,25 @@
 import React from "react";
 import { setRequestLocale } from "next-intl/server";
+import Link from "next/link";
 import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
+import { SearchField } from "@/components/search/SearchField";
 import { Card } from "@/components/ui/Card";
 import { Chip } from "@/components/ui/Chip";
-import { Search, ArrowRight, ShieldCheck, HelpCircle } from "lucide-react";
-import products from "@/content/products.json";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/content/Badge";
+import {
+  getProducts,
+  getFeaturedArticles,
+  getSharedCategories,
+} from "@/lib/content";
+import {
+  ArrowRight,
+  ShieldCheck,
+  HelpCircle,
+  Clock,
+  Sparkles,
+  LifeBuoy,
+} from "lucide-react";
 import siteConfig from "@/content/site.json";
 
 interface HomePageProps {
@@ -16,8 +30,32 @@ export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const products = getProducts();
+  const featuredArticles = getFeaturedArticles(locale);
+  const sharedCategories = getSharedCategories(locale);
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://support.connectpi.in";
+
+  // Schema.org WebSite JSON-LD with SearchAction
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: siteUrl,
+    name: "ConnectPi Support",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <div className="w-full pb-16 md:pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section
         aria-labelledby="hero-title"
@@ -34,29 +72,9 @@ export default async function HomePage({ params }: HomePageProps) {
             Search our knowledge base or browse support guides by product below.
           </p>
 
-          {/* Hero Search Bar Placeholder */}
-          <div className="mt-8 max-w-2xl mx-auto flex flex-col sm:flex-row items-stretch gap-2.5 sm:gap-2">
-            <div className="relative flex-1">
-              <label htmlFor="hero-search-input" className="sr-only">
-                Search articles, guides, topics
-              </label>
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-ink-muted">
-                <Search className="w-5 h-5" />
-              </div>
-              <input
-                id="hero-search-input"
-                type="search"
-                placeholder="Search articles, guides, topics..."
-                className="w-full min-h-[48px] pl-11 pr-4 py-2.5 rounded-r-md bg-surface text-ink text-base border-none focus:outline-none focus:ring-2 focus:ring-focus placeholder:text-ink-muted/80 shadow-sm"
-              />
-            </div>
-            <Button
-              variant="accent"
-              size="large"
-              className="sm:w-auto w-full font-bold"
-            >
-              Search
-            </Button>
+          {/* Interactive SearchField with App Selector & Combobox */}
+          <div className="mt-8 max-w-2xl mx-auto text-left">
+            <SearchField size="large" />
           </div>
 
           {/* Popular Search Chips */}
@@ -80,6 +98,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
       {/* Choose Your Product Section */}
       <section
+        id="products"
         aria-labelledby="products-title"
         className="mt-12 md:mt-16 safe-padding-inline"
       >
@@ -90,7 +109,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 id="products-title"
                 className="font-heading font-bold text-2xl sm:text-3xl text-ink"
               >
-                Choose your product
+                Choose your app
               </h2>
               <p className="mt-1 text-sm sm:text-base text-ink-muted">
                 Select your app to find tailored troubleshooting guides and FAQs.
@@ -131,59 +150,134 @@ export default async function HomePage({ params }: HomePageProps) {
         </Container>
       </section>
 
-      {/* Shared Topics & Need Help Section */}
-      <section className="mt-12 md:mt-16 safe-padding-inline">
+      {/* Popular Articles & Need Help Card Section (PRD 5.2 H4 & H5: Desktop 2/3 List, 1/3 Card) */}
+      <section
+        id="popular"
+        aria-labelledby="popular-articles-title"
+        className="mt-14 md:mt-20 safe-padding-inline"
+      >
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card
-              href="/shared/safety-privacy"
-              className="flex items-start gap-4 p-5"
-            >
-              <div className="w-10 h-10 rounded-r-lg bg-surface-tint flex items-center justify-center text-brand shrink-0">
-                <ShieldCheck className="w-5 h-5" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            {/* Popular Articles Column (Spans 2 cols on Desktop) */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center gap-2 mb-6">
+                <Sparkles className="w-5 h-5 text-accent" />
+                <h2
+                  id="popular-articles-title"
+                  className="font-heading font-bold text-2xl text-ink"
+                >
+                  Popular articles
+                </h2>
               </div>
-              <div>
-                <h3 className="font-heading font-bold text-base text-ink">
-                  Safety & Privacy
-                </h3>
-                <p className="text-xs sm:text-sm text-ink-muted mt-1">
-                  Community guidelines, privacy policies, and security best practices.
-                </p>
-              </div>
-            </Card>
 
-            <Card
-              href="/shared/account"
-              className="flex items-start gap-4 p-5"
-            >
-              <div className="w-10 h-10 rounded-r-lg bg-surface-tint flex items-center justify-center text-brand shrink-0">
-                <HelpCircle className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-base text-ink">
-                  Account & Login
-                </h3>
-                <p className="text-xs sm:text-sm text-ink-muted mt-1">
-                  Pi sign-in, account settings, and common login errors across apps.
-                </p>
-              </div>
-            </Card>
-
-            <div className="bg-surface-tint/60 border border-border rounded-r-xl p-5 flex flex-col justify-between">
-              <div>
-                <h3 className="font-heading font-bold text-base text-ink">
-                  Still need help?
-                </h3>
-                <p className="text-xs sm:text-sm text-ink-muted mt-1">
-                  Our support team is ready to help resolve your questions or bugs.
-                </p>
-              </div>
-              <div className="mt-4">
-                <Button href="/contact" size="small" variant="primary">
-                  Contact Support
-                </Button>
+              <div className="space-y-3.5">
+                {featuredArticles.map((art) => (
+                  <Link
+                    key={art.slug}
+                    href={`/${art.product}/${art.category}/${art.slug}`}
+                    className="block p-5 rounded-r-xl border border-border bg-surface hover:border-brand hover:shadow-xs transition-all group"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-brand">
+                            {art.product}
+                          </span>
+                          <span className="text-ink-muted text-xs">•</span>
+                          <span className="text-xs text-ink-muted">
+                            {art.category}
+                          </span>
+                        </div>
+                        <h3 className="font-heading font-bold text-base sm:text-lg text-ink group-hover:text-brand transition-colors mb-1">
+                          {art.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-ink-muted line-clamp-2 leading-relaxed">
+                          {art.summary}
+                        </p>
+                      </div>
+                      <div className="flex items-center text-xs text-ink-muted shrink-0 mt-1">
+                        <Clock className="w-3.5 h-3.5 mr-1" />
+                        <span>{art.readingTime}</span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
+
+            {/* "Still Need Help?" Sidebar Card (1 col on Desktop, stacked on Mobile) */}
+            <div>
+              <div className="p-6 rounded-r-xl bg-surface border border-border shadow-xs flex flex-col justify-between">
+                <div className="w-12 h-12 rounded-r-lg bg-surface-tint text-brand flex items-center justify-center mb-4">
+                  <LifeBuoy className="w-6 h-6" />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-ink mb-2">
+                  Still need help?
+                </h3>
+                <p className="text-sm text-ink-muted leading-relaxed mb-6">
+                  Cannot find what you are looking for? Our support team can assist with account, login, or bug issues.
+                </p>
+                <div className="space-y-3">
+                  <Button href="/contact" variant="primary" className="w-full justify-center">
+                    Contact Support
+                  </Button>
+                  <Button
+                    href="/contact?type=bug"
+                    variant="secondary"
+                    className="w-full justify-center"
+                  >
+                    Report a Bug
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Help for Every App (Shared Topics) Section */}
+      <section
+        id="topics"
+        aria-labelledby="shared-topics-title"
+        className="mt-14 md:mt-20 safe-padding-inline"
+      >
+        <Container>
+          <div className="mb-6">
+            <h2
+              id="shared-topics-title"
+              className="font-heading font-bold text-xl sm:text-2xl text-ink"
+            >
+              Help for every app
+            </h2>
+            <p className="mt-1 text-sm text-ink-muted">
+              Common security policies, community guidelines, and reporting guides.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {sharedCategories.map((cat) => (
+              <Card
+                key={cat.slug}
+                href={`/shared/${cat.slug}`}
+                className="flex items-start gap-4 p-5"
+              >
+                <div className="w-10 h-10 rounded-r-lg bg-surface-tint flex items-center justify-center text-brand shrink-0">
+                  {cat.slug === "safety-privacy" ? (
+                    <ShieldCheck className="w-5 h-5" />
+                  ) : (
+                    <HelpCircle className="w-5 h-5" />
+                  )}
+                </div>
+                <div>
+                  <h3 className="font-heading font-bold text-base text-ink">
+                    {cat.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-ink-muted mt-1 leading-relaxed">
+                    {cat.description}
+                  </p>
+                </div>
+              </Card>
+            ))}
           </div>
         </Container>
       </section>

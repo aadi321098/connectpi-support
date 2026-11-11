@@ -9,6 +9,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - Phase 2
+- Fuzzy client-side search engine (`lib/search/`):
+  - `SearchProvider` interface for swappable search backends.
+  - `FuseProvider` implementation with weighted field scoring (title 0.4, tags 0.2, headings 0.2, summary 0.15, body 0.05) and typo tolerance (threshold 0.35).
+  - Search index lazy-loading on first input focus (`public/search-index.en.json`).
+  - Search index generator script `scripts/build-search-index.ts` hooked into `npm run build`.
+- WAI-ARIA 1.2 accessible `SearchField` component (`components/search/SearchField.tsx`):
+  - Combobox pattern with `role="combobox"`, `aria-expanded`, and `aria-activedescendant`.
+  - Top 5 instant suggestions dropdown with keyboard navigation (Arrow keys, Enter, Escape).
+  - Product filter selector embedded inside the search field.
+  - 120ms input debounce.
+- Dedicated `/search` results page (`app/[locale]/search/page.tsx`):
+  - Filter chips by product (`app=`) and query (`q=`).
+  - Result cards with product badges and category labels.
+  - Zero-results empty state with search tips and Contact CTA.
+  - Configured with `robots: { index: false }` (`noindex`) for search hygiene.
+- Full Home Page implementation (`app/[locale]/page.tsx`):
+  - Hero with Space Grotesk H1, `SearchField`, and popular query chips.
+  - "Choose your app" cards grid (responsive: 1/2/3 columns).
+  - "Popular articles" list with app accent badges (from `featured: true` frontmatter).
+  - "Still need help?" card with Contact Support and Report Bug actions.
+  - "Help for every app" shared topics section.
+  - Schema.org `WebSite` JSON-LD with `SearchAction`.
+- Playwright E2E test suite in `tests/search.spec.ts` (all 28 tests passing across 390px, 768px, and 1280px).
+
 ### Added - Phase 1
 - MDX content engine in `lib/content`:
   - Zod schemas for products, categories, and articles (`lib/content/schema.ts`).

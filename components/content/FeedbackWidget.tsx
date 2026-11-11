@@ -78,3 +78,4 @@ export function FeedbackWidget({ articlePath }: FeedbackWidgetProps) {
     </div>
   );
 }
+

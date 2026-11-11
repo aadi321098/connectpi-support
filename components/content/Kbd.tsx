@@ -11,3 +11,4 @@ export function Kbd({ children }: KbdProps) {
     </kbd>
   );
 }
+

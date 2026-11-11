@@ -41,3 +41,4 @@ export function calculateReadingTime(text: string): string {
   const minutes = Math.max(1, Math.ceil(words / wordsPerMinute));
   return `${minutes} min read`;
 }
+
