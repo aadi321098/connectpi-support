@@ -12,6 +12,7 @@ export type InquiryType = z.infer<typeof InquiryTypeEnum>;
 export const ProductSlugEnum = z.enum([
   "connectpi-web",
   "connectpi-app",
+  "rushbox",
   "blade-rush",
   "shared",
 ]);

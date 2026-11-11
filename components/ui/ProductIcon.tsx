@@ -70,7 +70,7 @@ export function ProductIcon({
 }: ProductIconProps) {
   const identifier = (slug || type || "").toLowerCase();
 
-  if (identifier.includes("game") || identifier.includes("blade")) {
+  if (identifier.includes("game") || identifier.includes("blade") || identifier.includes("rush")) {
     return <GamepadIcon size={size} className={className} {...props} />;
   }
 

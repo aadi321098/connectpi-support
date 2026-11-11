@@ -1,24 +1,99 @@
 ---
-title: "How to report a bug or submit feedback"
-summary: "Help improve ConnectPi by sending diagnostic info, screenshots, and reproduction steps."
+title: "How to Report Bugs and Submit Feedback Across ConnectPi Platforms"
+summary: "Comprehensive guide to submitting actionable bug reports, reporting crashes, sharing feature feedback, and capturing diagnostic information."
 category: "bugs-feedback"
-order: 10
+order: 1
 featured: true
-tags: ["bug", "feedback", "support", "error"]
-updated: "2026-11-10"
+tags: ["bug-report", "feedback", "diagnostics", "support", "contact", "troubleshooting"]
+related: ["safety-privacy/privacy-overview", "account/cant-login"]
+updated: "2026-11-11"
 published: true
+platform: ["web", "android"]
+faq:
+  - q: "Where do I submit a bug report?"
+    a: "You can submit reports using our unified intake form at https://support.connectpi.in/contact or by emailing contact@connectpi.in."
+  - q: "Which platforms can I report bugs for?"
+    a: "Our support system handles issues across ConnectPi Web (connectpi.in), the ConnectPi Android App (in.connectpi.app), and Rush Box (rushbox.in / com.connectpi.bladerush)."
+  - q: "How long does it take for the team to respond?"
+    a: "Critical authentication and security bugs are prioritized within 24 hours. General bugs and feature feedback are reviewed within 48 to 72 hours."
+  - q: "Should I include screenshots?"
+    a: "Yes! Visual screenshots or screen recordings drastically accelerate diagnosis. Always ensure sensitive credentials or 24-word passphrases are never visible."
 ---
 
-Found a glitch or an unexpected behavior? Reporting clear steps helps our engineering team deploy rapid bug fixes.
+Encountering an issue or have an idea to make ConnectPi better? Detailed bug reports and constructive feedback allow our engineering team to rapidly diagnose issues, release software patches, and prioritize community requests.
 
-## What to include in a bug report
-1. **Device & OS:** What phone or browser (e.g. Android 13, Pi Browser v1.6.1, Chrome 122).
-2. **Steps to reproduce:** What action you performed immediately prior to the error.
-3. **Expected vs Actual behavior:** What should have happened compared to what actually happened.
+---
 
-<Callout type="tip" title="Quick Support">
-Use our structured contact form to automatically attach device and browser diagnostics.
+## 1. Official Support Channels
+
+You can submit technical bug reports and product feedback through either of our primary channels:
+
+- **Web Support Portal (Recommended):** Submit an inquiry directly via our [Contact Support Form](/contact). This automatically captures your device and browser diagnostics.
+- **Direct Support Email:** Contact our engineering team at [contact@connectpi.in](mailto:contact@connectpi.in).
+
+---
+
+## 2. Choosing the Affected Product
+
+When filing a report, please specify which platform was affected:
+
+| Platform | Product Slug | Focus Areas |
+|---|---|---|
+| **ConnectPi Web** | `connectpi-web` | Desktop / mobile browser social feeds (`connectpi.in`), Pi Browser login, post creation, profile settings. |
+| **ConnectPi Android App** | `connectpi-app` | Native Android APK (`in.connectpi.app`), push notifications, custom username picker, camera/media upload. |
+| **Rush Box** | `rushbox` | Web arcade (`rushbox.in`) and Play Store release (`com.connectpi.bladerush`), Fruit Slice combos, RB coins balance, game lag. |
+| **Account & Safety** | `shared` | Security concerns, privacy requests, terms of service, or general community questions. |
+
+---
+
+## 3. Anatomy of an Actionable Bug Report
+
+To help our developers reproduce and resolve issues quickly, please structure your report using this checklist:
+
+<Steps>
+  <Step title="Provide clear environment details">
+    Specify your device model, operating system, and browser or app version:
+    - *Example:* Samsung Galaxy S23, Android 14, Pi Browser v1.6.1.
+    - *Example:* Windows 11 PC, Google Chrome v124, Web desktop feed.
+  </Step>
+
+  <Step title="Document step-by-step reproduction steps">
+    List the exact actions that lead to the glitch:
+    1. Opened `connectpi.in/signup` inside Pi Browser.
+    2. Tapped **Continue with Pi**.
+    3. The authentication spinner spun for 60 seconds without displaying the permission modal.
+  </Step>
+
+  <Step title="Contrast expected vs actual behavior">
+    - **Expected:** The Pi permission grant modal should appear within 3 seconds.
+    - **Actual:** The spinner froze indefinitely until displaying an authentication timeout error.
+  </Step>
+
+  <Step title="Attach relevant screenshots or screen recordings">
+    Attach clear screenshots showing the error prompt, console warning, or visual glitch.
+  </Step>
+</Steps>
+
+---
+
+<Callout type="warning" title="Privacy & Security Rule">
+  **Never include passwords, private wallet keys, or 24-word Pi passphrases in bug reports or screenshots.**
+  
+  Please blur or crop any confidential personal credentials before uploading attachments to support tickets.
 </Callout>
 
-<ContactCTA title="Ready to submit a report?" description="Use the official ConnectPi bug intake form." />
+---
 
+## 4. Submitting Feature Feedback & Community Ideas
+
+We love hearing ideas from Pioneers! If you want to suggest a new feature (e.g. new mini-game for Rush Box, localized community channels, or feed discovery filters):
+
+1. Select **Feedback & Suggestions** on our [Contact Form](/contact).
+2. Clearly explain the proposed feature and why it would benefit the broader Pioneer community.
+3. Suggest practical UX workflows or references where applicable.
+
+Community feedback is reviewed weekly during product roadmap planning sessions.
+
+---
+
+<ContactCTA title="Ready to submit a report?" description="Use the official ConnectPi support form to send your ticket directly to our engineers." />

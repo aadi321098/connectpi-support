@@ -155,26 +155,34 @@
     "body": "The native ConnectPi Android App delivers the fastest mobile social experience for Pioneers worldwide, featuring real time push notifications, offline feed caching, daily reward streak reminders, and custom username creation. 1. Why Download the Android App? While ConnectPi Web is accessible from any desktop or mobile browser, the native Android app unlocks exclusive mobile benefits: Custom Username Selection: Choose your own unique Pioneer handle (e.g. @pioneer alex ) during registration, rather than receiving an auto generated username. Instant Push Alerts: Get real time notifications when Pioneers mention you, comment on your posts, or send peer messages. Daily Check in & Quests: Never miss your daily CP token claim with streak reminder notifications. Integrated Camera & Media: Snap photos and record videos directly inside the post editor without leaving the application. 2. Installation via Google Play Store Follow these steps to install the official app safely on your Android device: Open the official ConnectPi store page on your Android smartphone: 👉 Download Connect Pi on Google Play Store (Package ID: in.connectpi.app | Verified Developer: Connect Pi) Tap the green Install button. The Play Store will verify the package signature and download the application ( 30–45 MB). Once installation finishes, tap Open or launch the Connect Pi app icon from your home screen or app drawer. 3. Account Setup & Custom Username Selection When you launch ConnectPi for the first time, you can sign in with your existing account or create a brand new Pioneer profile: Choose Sign up with Google or Continue with Pi Network . Unlike the web onboarding flow which assigns an automatic handle, the Android app provides an interactive Username Picker : Choose a unique handle (e.g. yourname or pioneer crypto ). Usernames can contain lowercase alphanumeric letters, digits, and underscores. ConnectPi will check availability in real time. Add your display name, a brief bio introducing yourself to the community, and upload a profile avatar. 4. App Permissions Guide To deliver core community features, ConnectPi requests standard Android runtime permissions. Here is why each permission is required: | Permission | Category | Purpose in ConnectPi | Mandatory? | | | | |: :| | POST NOTIFICATIONS | Notifications | Delivers instant alerts for daily CP check in rewards, mentions, and incoming direct messages. | Recommended | | CAMERA | Media Capture | Allows taking live photos and short videos directly within the post composer. | Optional | | READ MEDIA IMAGES | Storage / Gallery | Required to select and upload photos or screenshots from your photo gallery. | Recommended | | ACCESS COARSE LOCATION | Location | Powers the optional Locality Feed and regional Pioneer marketplace discovery. | Optional | You can manage or revoke optional permissions (such as Location or Camera) at any time from your device's Settings Apps Connect Pi Permissions . 5. System Requirements & Specifications Operating System: Android 8.0 (API Level 26) or higher (Android 9.0+ recommended). Free Storage Space: Minimum 50 MB for app installation and media cache. Internet Connectivity: Stable 4G, 5G, or Wi Fi connection. Package Identifier: in.connectpi.app Always verify that you are downloading ConnectPi with the exact package ID in.connectpi.app on the official Google Play Store. Never install APK files from untrusted third party websites or Telegram groups. Remember: ConnectPi will never ask for your 24 word Pi wallet passphrase."
   },
   {
-    "id": "blade-rush/gameplay/how-to-play",
-    "url": "/blade-rush/gameplay/how-to-play",
-    "title": "How to play Blade Rush and earn points",
-    "summary": "Understand fruit slicing mechanics, bomb avoidance, and point multiplier streaks.",
+    "id": "rushbox/gameplay/how-to-play",
+    "url": "/rushbox/gameplay/how-to-play",
+    "title": "How to Play Rush Box Games and Earn RB Rewards",
+    "summary": "Complete gameplay guide for the Rush Box arcade library on Web and Android, including Fruit Slice mechanics, combos, bombs, and RB coin rewards.",
     "category": "gameplay",
     "categoryTitle": "Gameplay & rewards",
-    "product": "blade-rush",
-    "productName": "Blade Rush",
-    "productAccent": "#8A4B00",
+    "product": "rushbox",
+    "productName": "Rush Box",
+    "productAccent": "#F59E0B",
     "tags": [
-      "blade-rush",
-      "game",
-      "points",
-      "combos"
+      "rushbox",
+      "fruit-slice",
+      "arrow-puzzle",
+      "rb-coins",
+      "rewards",
+      "arcade"
     ],
     "headings": [
-      "Basic rules",
-      "Controls"
+      "1. Accessing Rush Box (Web & Mobile)",
+      "Instant Web Play (rushbox.in)",
+      "Google Play Store Native Android App",
+      "2. Featured Game Modes & Library",
+      "3. Fruit Slice Masterclass (Blade Slashing Mechanics)",
+      "Game Rules",
+      "Active Power-Ups",
+      "4. RB Coins, Daily Tasks & Progression"
     ],
-    "body": "Blade Rush is an arcade fruit slicing minigame integrated directly into the ConnectPi ecosystem where high scores convert into loyalty reward tokens. Basic rules Swipe across fruits to slice them before they drop off screen. Avoid slicing red hazardous bombs. Chain 3 or more fruits in a single swipe to trigger a Combo Multiplier . Controls Desktop: Click and drag mouse cursor rapidly across flying targets. Mobile / Touchscreen: Swipe your finger across screen. Slicing golden dragonfruits grants an instant 10 second frenzy mode where bomb spawns are paused! [PLACEHOLDER: Add reward conversion table and daily streak bonuses.]"
+    "body": "Rush Box is an arcade and puzzle gaming platform built by ConnectPi, featuring instant web play at rushbox.in and a native Android edition on the Google Play Store. 1. Accessing Rush Box (Web & Mobile) Players can enjoy Rush Box across two official platforms: Instant Web Play (rushbox.in) Open https://rushbox.in in your desktop or mobile browser to jump straight into games with zero downloads required: Google Play Store Native Android App For ultra smooth 60+ FPS touch controls, offline gameplay, and haptic feedback, download the native app: 👉 Download Rush Box on Google Play Store (Package ID: com.connectpi.bladerush ) 2. Featured Game Modes & Library The Rush Box library includes a growing collection of casual, puzzle, and action titles: | Game | Category | Core Objective | Key Highlights | | | | | | | Fruit Slice | Action / Arcade | Slice flying fruits while avoiding bombs. | Combo multipliers, power ups, frenzy mode. | | Arrow Tap Out | 3D Puzzle | Tap directional arrows to clear cluttered blocks. | Spatial untangling, relaxing logic puzzles. | | Arrow Escape | Maze Puzzle | Navigate arrows through labyrinth pathways to freedom. | Progressive difficulty, V2 obstacle modes. | | Snake | Classic Arcade | Steer the snake to eat apples and grow without hitting walls. | Responsive directional swipes, infinite survival. | | Tic Tac Toe | Board / Strategy | Place X and O symbols to connect 3 in a row. | Quick casual matches against AI or friends. | 3. Fruit Slice Masterclass (Blade Slashing Mechanics) Fruit Slice is the flagship action title within Rush Box. Game Rules Three Hearts System: Every round begins with 3 hearts. Missing normal fruits or slicing red hazardous bombs deducts hearts. Combo Multipliers: Slice 3 or more fruits in a single fluid swipe to trigger a Combo Multiplier ( 3x , 4x , 5x+ ), drastically increasing your point total. Golden Dragonfruit Frenzy: Slicing special golden fruits triggers a 10 second Frenzy Mode , flooding the screen with fruits while bomb spawns are paused! Active Power Ups Players can deploy power ups to protect streaks and maximize scores: Shield: Negates damage from the next bomb sliced. Freeze: Slows object gravity and flight trajectories, making precision multi fruit swipes effortless. Heart Shield: Grants an additional reserve heart to recover from near fatal mistakes. 4. RB Coins, Daily Tasks & Progression | Reward Mechanism | Requirement | RB Coins Payout | | | |: :| | Level Progression | Clear levels across Level Mode chapters | +5 to +25 RB | | Daily Check in Streak | Log in and claim consecutive daily bonuses | +10 to +50 RB | | High Combo Streak | Execute 5x or higher combos in Fruit Slice | +15 RB | | Daily Quests (Tasks) | Complete daily game objectives in the Tasks tab | +20 to +100 RB | Accumulated RB Coins can be used in the in game shop to unlock custom blade slicing trails, stylish background arenas, and power up inventory boosts."
   },
   {
     "id": "shared/safety-privacy/privacy-overview",
@@ -210,22 +218,27 @@
   {
     "id": "shared/bugs-feedback/how-to-report-a-bug",
     "url": "/shared/bugs-feedback/how-to-report-a-bug",
-    "title": "How to report a bug or submit feedback",
-    "summary": "Help improve ConnectPi by sending diagnostic info, screenshots, and reproduction steps.",
+    "title": "How to Report Bugs and Submit Feedback Across ConnectPi Platforms",
+    "summary": "Comprehensive guide to submitting actionable bug reports, reporting crashes, sharing feature feedback, and capturing diagnostic information.",
     "category": "bugs-feedback",
     "categoryTitle": "Bugs & feedback",
     "product": "shared",
     "productName": "All Apps",
     "productAccent": "#5B2FC9",
     "tags": [
-      "bug",
+      "bug-report",
       "feedback",
+      "diagnostics",
       "support",
-      "error"
+      "contact",
+      "troubleshooting"
     ],
     "headings": [
-      "What to include in a bug report"
+      "1. Official Support Channels",
+      "2. Choosing the Affected Product",
+      "3. Anatomy of an Actionable Bug Report",
+      "4. Submitting Feature Feedback & Community Ideas"
     ],
-    "body": "Found a glitch or an unexpected behavior? Reporting clear steps helps our engineering team deploy rapid bug fixes. What to include in a bug report 1. Device & OS: What phone or browser (e.g. Android 13, Pi Browser v1.6.1, Chrome 122). 2. Steps to reproduce: What action you performed immediately prior to the error. 3. Expected vs Actual behavior: What should have happened compared to what actually happened. Use our structured contact form to automatically attach device and browser diagnostics."
+    "body": "Encountering an issue or have an idea to make ConnectPi better? Detailed bug reports and constructive feedback allow our engineering team to rapidly diagnose issues, release software patches, and prioritize community requests. 1. Official Support Channels You can submit technical bug reports and product feedback through either of our primary channels: Web Support Portal (Recommended): Submit an inquiry directly via our Contact Support Form. This automatically captures your device and browser diagnostics. Direct Support Email: Contact our engineering team at contact@connectpi.in. 2. Choosing the Affected Product When filing a report, please specify which platform was affected: | Platform | Product Slug | Focus Areas | | | | | | ConnectPi Web | connectpi web | Desktop / mobile browser social feeds ( connectpi.in ), Pi Browser login, post creation, profile settings. | | ConnectPi Android App | connectpi app | Native Android APK ( in.connectpi.app ), push notifications, custom username picker, camera/media upload. | | Rush Box | rushbox | Web arcade ( rushbox.in ) and Play Store release ( com.connectpi.bladerush ), Fruit Slice combos, RB coins balance, game lag. | | Account & Safety | shared | Security concerns, privacy requests, terms of service, or general community questions. | 3. Anatomy of an Actionable Bug Report To help our developers reproduce and resolve issues quickly, please structure your report using this checklist: Specify your device model, operating system, and browser or app version: Example: Samsung Galaxy S23, Android 14, Pi Browser v1.6.1. Example: Windows 11 PC, Google Chrome v124, Web desktop feed. List the exact actions that lead to the glitch: 1. Opened connectpi.in/signup inside Pi Browser. 2. Tapped Continue with Pi . 3. The authentication spinner spun for 60 seconds without displaying the permission modal. Expected: The Pi permission grant modal should appear within 3 seconds. Actual: The spinner froze indefinitely until displaying an authentication timeout error. Attach clear screenshots showing the error prompt, console warning, or visual glitch. Never include passwords, private wallet keys, or 24 word Pi passphrases in bug reports or screenshots. Please blur or crop any confidential personal credentials before uploading attachments to support tickets. 4. Submitting Feature Feedback & Community Ideas We love hearing ideas from Pioneers! If you want to suggest a new feature (e.g. new mini game for Rush Box, localized community channels, or feed discovery filters): 1. Select Feedback & Suggestions on our Contact Form. 2. Clearly explain the proposed feature and why it would benefit the broader Pioneer community. 3. Suggest practical UX workflows or references where applicable. Community feedback is reviewed weekly during product roadmap planning sessions."
   }
 ]

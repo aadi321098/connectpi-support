@@ -24,15 +24,15 @@
     "status": "active"
   },
   {
-    "slug": "blade-rush",
-    "name": "Blade Rush",
+    "slug": "rushbox",
+    "name": "Rush Box",
     "type": "game",
-    "description": "Fruit slicing game: gameplay, purchases, ads and rewards.",
-    "initial": "B",
-    "accent": "#8A4B00",
-    "tint": "#FFEBC7",
+    "description": "Arcade & puzzle mini-games: Fruit Slice, Snake, Arrow Escape, rewards.",
+    "initial": "R",
+    "accent": "#F59E0B",
+    "tint": "#FEF3C7",
     "order": 3,
-    "url": "https://connectpi.in/games/blade-rush",
+    "url": "https://rushbox.in",
     "status": "active"
   }
 ]
