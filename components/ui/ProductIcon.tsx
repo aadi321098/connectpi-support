@@ -80,3 +80,4 @@ export function ProductIcon({
 
   return <BrowserIcon size={size} className={className} {...props} />;
 }
+
