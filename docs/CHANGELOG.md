@@ -9,6 +9,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added - Phase 3
+- Production contact & support system (`lib/support/`):
+  - Shared Zod schema (`lib/support/schema.ts`) covering 4 inquiry types (Question, Bug report, Account issue, Feedback).
+  - Conditional validation enforcing Device model and OS for Bug reports.
+  - Multi-app product routing with subject prefix `[ConnectPi Support][Product][Type]`.
+  - Rate limiting (`lib/support/ratelimit.ts`) enforcing max 5 requests/hour per IP with Upstash Redis and in-memory dev fallback.
+  - Anti-spam protection with hidden honeypot and Cloudflare Turnstile verification (`lib/support/turnstile.ts`).
+  - Email delivery via Resend with mock logger fallback in development (`lib/support/deliver.ts`).
+  - Zero PII logging in server logs.
+- API Endpoints (`app/api/`):
+  - `POST /api/contact`: Body size limit (16 KB), honeypot check, rate limiter, Turnstile check, and email delivery.
+  - `POST /api/feedback`: Article Yes/No feedback recorder.
+  - `GET /api/health`: Uptime and health monitoring check.
+- Accessible Contact UI (`components/forms/`):
+  - `Field` component with label, description, and inline error text with AlertCircle icon (`aria-invalid`, `aria-describedby`, `aria-live`).
+  - `TurnstileWidget` with flexible responsive width and dev bypass badge.
+  - `ContactForm` component supporting 5 states (idle, validating, submitting with spinner, success with ticket reference, error with preserved inputs), 16px minimum text size, and character counter (4000 limit).
+- Contact Page (`app/[locale]/contact/page.tsx`):
+  - Responsive 2-column layout (form max-w 640px on left, "Before you write" tips, support hours, and direct email on right).
+  - Context preservation: `?app=` pre-selects product and `?from=app` displays in-app referral badge.
+- Playwright E2E test suite in `tests/contact.spec.ts` (all 46 tests passing across mobile, tablet, and desktop).
+
 ### Added - Phase 2
 - Fuzzy client-side search engine (`lib/search/`):
   - `SearchProvider` interface for swappable search backends.
