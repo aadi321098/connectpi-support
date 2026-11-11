@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { Container } from "./Container";
 import { MobileDrawer } from "./MobileDrawer";
@@ -32,11 +33,16 @@ export function Header() {
           <div className="flex items-center gap-3 sm:gap-4">
             <Link
               href="/"
-              className="flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus focus-visible:outline-offset-2 rounded-r-md px-1 py-0.5"
+              className="flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus focus-visible:outline-offset-2 rounded-r-md px-1 py-0.5 group"
             >
-              <span className="w-8 h-8 rounded-r-md bg-brand text-white flex items-center justify-center font-heading font-bold text-lg shadow-sm">
-                π
-              </span>
+              <Image
+                src="/images/logo-icon.png"
+                alt="ConnectPi Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-lg object-contain shadow-xs transition-transform group-hover:scale-105"
+                priority
+              />
               <span className="font-heading font-bold text-lg sm:text-xl text-ink tracking-tight">
                 {siteConfig.siteName}
               </span>

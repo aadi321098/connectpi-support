@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { Container } from "./Container";
 import siteConfig from "@/content/site.json";
@@ -19,11 +20,15 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-white font-heading font-bold text-xl tracking-tight mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus rounded-r-md"
+              className="inline-flex items-center gap-2.5 text-white font-heading font-bold text-xl tracking-tight mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-focus rounded-r-md group"
             >
-              <span className="w-8 h-8 rounded-r-md bg-brand text-white flex items-center justify-center font-heading font-bold text-lg">
-                π
-              </span>
+              <Image
+                src="/images/logo-icon.png"
+                alt="ConnectPi Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-lg object-contain transition-transform group-hover:scale-105"
+              />
               <span>{siteConfig.siteName}</span>
             </Link>
             <p className="text-sm text-footer-text/80 leading-relaxed max-w-sm">

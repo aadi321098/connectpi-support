@@ -30,7 +30,14 @@ export const metadata: Metadata = {
   },
   description:
     "Find answers, troubleshooting guides, and help for ConnectPi Web, ConnectPi App, and Blade Rush.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://support.connectpi.in"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/logo-icon.png", type: "image/png" },
+    ],
+    apple: "/images/logo-icon.png",
+  },
 };
 
 export function generateStaticParams() {

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 import { X, ExternalLink } from "lucide-react";
@@ -108,9 +109,18 @@ export function MobileDrawer({ isOpen, onClose, triggerRef }: MobileDrawerProps)
         <div>
           {/* Header row: Brand & Close button */}
           <div className="flex items-center justify-between pb-4 border-b border-border">
-            <span className="font-heading font-bold text-lg text-ink">
-              {siteConfig.siteName}
-            </span>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/logo-icon.png"
+                alt="ConnectPi Logo"
+                width={28}
+                height={28}
+                className="w-7 h-7 rounded-lg object-contain"
+              />
+              <span className="font-heading font-bold text-lg text-ink">
+                {siteConfig.siteName}
+              </span>
+            </div>
             <button
               ref={closeButtonRef}
               onClick={onClose}
